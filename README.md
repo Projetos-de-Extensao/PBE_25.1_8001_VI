@@ -16,7 +16,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 | -- | -- |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | 202402103253 | Rodrigo de Sousa Ferrett |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202402717707  |  João Pedro Borges Souza Santana |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
