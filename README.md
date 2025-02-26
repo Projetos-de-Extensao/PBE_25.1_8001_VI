@@ -15,6 +15,9 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 |Matrícula | Aluno |
 | -- | -- |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202402103253 | Rodrigo de Sousa Ferrett |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
