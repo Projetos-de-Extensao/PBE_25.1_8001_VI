@@ -14,7 +14,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202402841904  |  Pedro Henrique Silvestre de Mello Moreira |
 | 202402103253 | Rodrigo de Sousa Ferrett |
 | 202402717707  |  João Pedro Borges Souza Santana |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
