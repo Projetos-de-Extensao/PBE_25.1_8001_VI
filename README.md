@@ -18,7 +18,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 | 202402103253  | Rodrigo de Sousa Ferrett |
 | 202402717707  |  João Pedro Borges Souza Santana |
 | 202402705989  |  Lucas Alves Castela Pereira |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202307539058  |  Rafael Viana Domingues |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
