@@ -27,7 +27,7 @@ Descreva o seu projeto em linhas gerais.
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
 
 ## Instalação 
-**Linguagens**: Python
+**Linguagens**: Python <br>
 **Tecnologias**: Django,git,github
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
