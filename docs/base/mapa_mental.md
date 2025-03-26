@@ -12,7 +12,7 @@ Mapa mental consiste em criar resumos cheios de símbolos, cores, setas e frases
 ## Metodologia
  
 <p align = "justify">
-Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa mental. O documento foi produzido utilizando a ferramenta...
+Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa mental. O documento foi produzido utilizando a ferramenta plantuml.
 </p>
  
 ## Mapa mental - Geral.
@@ -23,31 +23,34 @@ Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa men
 ```puml
 @startmindmap
 
-'Compatible with OrgMode 
+* Aplicativo delivery \n para ilha primeira
 
-* Solving \n Global \n Warming
-
-** Eating differently
-*** Vegan
-*** Vegetarian
-*** Less processed foods
-*** Buy local food
-** Travel
-*** Bike more
-*** Ride buses
-*** Buy an electric car
+** Usuário
+*** Cadastro/Login
+**** Dados pessoais
+**** Endereço
+**** Formas de pagamento
+*** Escolha de produtos
+**** Navegação/Pesquisa de produtos
+**** Descrição/Imagem/Preço
+*** Carrinho
+*** Confirmação do \n produto
+** Ilha delivery
+*** Receber pedido
+*** Calculo do preço
+*** Efetuação da entrega
+*** Notificar o usuário
 
 left side
 
-** Home
-*** Energy audit
-*** Use a cloths line
-*** Add insulation
-*** Get solar panels
-** Be a role model
-*** Vote
-*** Encourage others
-*** Teach your kids
+** Sistema
+*** Fluxo de Pedidos
+*** Notificações
+*** Pagamentos
+**** Formas de pagamentos
+*** Gerenciamento de pedidos
+*** Relatórios
+**** Vendas, entregas e \n feedbacks dos usuários
 
 @endmindmap
 ```
