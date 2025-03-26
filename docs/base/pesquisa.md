@@ -17,18 +17,18 @@ A equipe fez uma pesquisa geral sobre o problema e soluções existentes para o 
 
 ## Principais soluções existentes:
 
-- Entregas por terceiros (containers)
-[Ilha delivery instagram](https://www.instagram.com/ilha_delivery?igsh=MXQwZDlhOGdtdTQ2)
+- Entregas por terceiros (containers) <br>
+[Ilha delivery instagram](https://www.instagram.com/ilha_delivery?igsh=MXQwZDlhOGdtdTQ2) <br>
 [Ilha delivery site](https://deliveryilha.com.br/)
 
-- Não relacionados mas interessante para pesquisa
+- Não relacionados mas interessante para pesquisa <br>
 [delivery da ilha da Gigoia](https://www.oquefazernagigoia.com/delivery-ilha-da-gigoia)
 
 ## Ideias de inovação:
 <p align = "justify">
-Entrega via drone
-Aplicativo de delivery próprio
-Aplicativo de entregas em conjunto com as entregas de terceiros
+Entrega via drone <br>
+Aplicativo de delivery próprio <br>
+Aplicativo de entregas em conjunto com as entregas de terceiros <br>
 Site de delivery
 </p>
 
