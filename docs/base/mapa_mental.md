@@ -20,9 +20,37 @@ Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa men
 ## Versão 1.0
  
 ### Mapa mental 1
- 
-[![Mapa mental Entrevista](../assets/Mapas_mentais/....png)](../assets/Mapas_mentais/...png)
- 
+```puml
+@startmindmap
+
+'Compatible with OrgMode 
+
+* Solving \n Global \n Warming
+
+** Eating differently
+*** Vegan
+*** Vegetarian
+*** Less processed foods
+*** Buy local food
+** Travel
+*** Bike more
+*** Ride buses
+*** Buy an electric car
+
+left side
+
+** Home
+*** Energy audit
+*** Use a cloths line
+*** Add insulation
+*** Get solar panels
+** Be a role model
+*** Vote
+*** Encourage others
+*** Teach your kids
+
+@endmindmap
+```
  
 ### Mapa mental 2
  
