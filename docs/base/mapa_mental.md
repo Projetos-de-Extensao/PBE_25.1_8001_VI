@@ -23,34 +23,55 @@ Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa men
 ```puml
 @startmindmap
 
-* Aplicativo delivery \n para ilha primeira
+<style>
+document {
+  BackGroundColor #1e2129
+}
+root {
+  FontColor #white
+  LineColor white
+}
+legend{
+    FontColor Black
+    BackGroundColor white
+}
+</style>
 
-** Usuário
-*** Cadastro/Login
-**** Dados pessoais
-**** Endereço
-**** Formas de pagamento
-*** Escolha de produtos
-**** Navegação/Pesquisa de produtos
-**** Descrição/Imagem/Preço
-*** Carrinho
-*** Confirmação do \n produto
-** Ilha delivery
-*** Receber pedido
-*** Calculo do preço
-*** Efetuação da entrega
-*** Notificar o usuário
+legend left
+|= |= Tipo |
+|<back:Purple>   </back>| Solução |
+|<back:Indigo>   </back>| Agentes |
+|<back:BlueViolet>   </back>| Funcionalidades |
+endlegend
+
+*[#Purple] Aplicativo delivery \n para ilha primeira
+
+**[#Indigo] Usuário
+***[#BlueViolet] Cadastro/Login
+****[#BlueViolet] Dados pessoais
+****[#BlueViolet] Endereço
+****[#BlueViolet] Formas de pagamento
+***[#BlueViolet] Escolha de produtos
+****[#BlueViolet] Navegação/Pesquisa de produtos
+****[#BlueViolet] Descrição/Imagem/Preço
+***[#BlueViolet] Carrinho
+***[#BlueViolet] Confirmação do \n produto
+**[#Indigo] Ilha delivery
+***[#BlueViolet] Receber pedido
+***[#BlueViolet] Calculo do preço
+***[#BlueViolet] Efetuação da entrega
+***[#BlueViolet] Notificar o usuário
 
 left side
 
-** Sistema
-*** Fluxo de Pedidos
-*** Notificações
-*** Pagamentos
-**** Formas de pagamentos
-*** Gerenciamento de pedidos
-*** Relatórios
-**** Vendas, entregas e \n feedbacks dos usuários
+**[#Indigo] Sistema
+***[#BlueViolet] Fluxo de Pedidos
+***[#BlueViolet] Notificações
+***[#BlueViolet] Pagamentos
+****[#BlueViolet] Formas de pagamentos
+***[#BlueViolet] Gerenciamento de pedidos
+***[#BlueViolet] Relatórios
+****[#BlueViolet] Vendas, entregas e \n feedbacks dos usuários
 
 @endmindmap
 ```
