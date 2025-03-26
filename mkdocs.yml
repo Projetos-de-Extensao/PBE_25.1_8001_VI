@@ -1,9 +1,12 @@
 site_name: My Docs
 
 theme:
-  name: mkdocs
-  color_mode: dark
-  user_color_mode_toggle: true
+  name: material
+  palette:
+    primary: black
+    accent: deep purple
+    scheme: slate
+
 
 plugins:
   - plantuml:
