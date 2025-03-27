@@ -80,9 +80,15 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
  
 ---
  
-### 5. "Outras perguntas pertinentes ao contexto", Como seria a forma de adicionar do cliente adicionar os produtos ?
+### 5. Existe a possibilidade de cadastrar mais de um endereço?
 <p align = "justify">
-<b>XXX</b> - O cliente....
+<b>XXXX</b> Na página principal do aplicativo, haverá um ícone de uma engrenagem. Ao selecionar esse ícone, o usuário será redirecionado para outra página, onde encontrará uma área chamada "Endereço". Ao selecionar essa área, o usuário entrará em uma página onde poderá ver o endereço cadastrado, além de ter a opção de remover o endereço ou adicionar um novo.
+
+<b>YYYY</b> O usuário poderá solicitar pedidos simultâneos para até 2 endereços diferentes.
+
+<b>ZZZZ</b> O usuário terá a possibilidade de registrar um dos endereços como principal.
+
+<b>WWWWW</b> O usuário também poderá solicitar pedidos diretamente de sua localização atual, sem precisar cadastrar o endereço do local.
 </p>
  
 ### 6. Quais informações seriam interessante para o cliente?
