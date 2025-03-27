@@ -36,22 +36,22 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 </p>
 
 ---
- 
+
 ### 2. Como será o processo para cadastrar um novo cliente?
- 
+
 <p align = "justify">
-<b>Pedro Silvestre</b> - O cliente deve fazer login ao iniciar o aplicativo e caso não possua conta, o cliente pode se cadastrar.</p> 
- 
+<b>Pedro Silvestre</b> - O cliente deve fazer login ao iniciar o aplicativo e caso não possua conta, o cliente pode se cadastrar.</p>
+
  <p align = "justify">
 <b>João Pedro</b> - O cadastro pode ser feito de duas formas: inserindo e-mail e criando uma senha no app ou fazendo login com a conta Google.</p>
- 
-<p align = "justify"> 
+
+<p align = "justify">
 <b>Rafael Viana</b> - Após o cadastro, com o usuário logado, o sistema redireciona o cliente para a página inicial e o cadastra automaticamente no banco de dados.
  </p>
 ---
- 
+
 ### 3. Como adicionar produtos?
- 
+
 <p align = "justify">
 <b>João Pedro</b> - Após o login, o cliente pode escolher entre duas opções de entrega: delivery (entregas rápidas de alimentos e similares) ou entregas grandes (produtos maiores como eletrônicos e roupas).
 </p>
@@ -59,9 +59,9 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 <p align = "justify">
 <b>Pedro Silvestre</b> - O cliente insere o tipo de produto a ser entregue e o link correspondente a sua venda numa plataforma.
 </p>
- 
+
 <b>Rafael Viana</b> - O sistema exibe as opções de entrega, incluindo prazo e custo.
- 
+
 <b>João Pedro</b> - O cliente pode confirmar o pedido ou cancelá-lo.
 
 <b>Pedro Silvestre</b> - Após confirmado o produto é adicionado a lista de pedidos em andamento, onde as informações referentes a entrega são exibidas como data da entrega final e  localização atual.
@@ -91,6 +91,7 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 
 <b>WWWWW</b> O usuário também poderá solicitar pedidos diretamente de sua localização atual, sem precisar cadastrar o endereço do local.
 </p>
+---
 
 ### 6. Quais informações seriam interessante para o cliente?
 <p align = "justify">

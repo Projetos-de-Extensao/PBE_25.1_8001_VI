@@ -43,4 +43,4 @@ Dentro da ilha, a entrega pode ser feita de duas formas: o cliente retira o pedi
 ## Versionamento
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| 25/03/2005 | 1.0 | Criação do documento | Rodrigo de Sousa Ferrett |
+| 25/03/2025 | 1.0 | Criação do documento | Rodrigo de Sousa Ferrett |
