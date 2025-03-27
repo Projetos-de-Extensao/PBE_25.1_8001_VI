@@ -36,7 +36,6 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 </p>
 
 ---
-<<<<<<< HEAD
  
 ### 2. Como será o processo para cadastrar um novo cliente?
  
@@ -53,25 +52,6 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
  
 ### 3. Como adicionar produtos?
  
-=======
-### 2. Como será o processo para cadastrar um novo clientetorneio?
-
-<p align = "justify"></p>
-<b>XXXX</b> - O moderador deverá fazer login e...
-
-<b>YYYY</b> - O cliente...
-
-<b>WWWW</b> - Com o usuário logado, ele deverá...
-
-<b>ZZZZ</b> - O cliente...
-
-<b>KKK</b> - O cliente...
-
-
-
-### 3. Como será a forma de adicionar produtos?
-
->>>>>>> 5819498ccf496c9b85410a7a403ff889747e06d4
 <p align = "justify">
 <b>João Pedro</b> - Após o login, o cliente pode escolher entre duas opções de entrega: delivery (entregas rápidas de alimentos e similares) ou entregas grandes (produtos maiores como eletrônicos e roupas).
 </p>
@@ -79,19 +59,12 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 <p align = "justify">
 <b>Pedro Silvestre</b> - O cliente insere o tipo de produto a ser entregue e o link correspondente a sua venda numa plataforma.
 </p>
-<<<<<<< HEAD
  
 <b>Rafael Viana</b> - O sistema exibe as opções de entrega, incluindo prazo e custo.
  
 <b>João Pedro</b> - O cliente pode confirmar o pedido ou cancelá-lo.
 
 <b>Pedro Silvestre</b> - Após confirmado o produto é adicionado a lista de pedidos em andamento, onde as informações referentes a entrega são exibidas como data da entrega final e  localização atual.
-=======
-
-<b>ZZZZ</b> - O produto....
-
-<b>XXXX</b> - O produto....
->>>>>>> 5819498ccf496c9b85410a7a403ff889747e06d4
 
 
 ---
