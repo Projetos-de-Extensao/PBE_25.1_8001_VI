@@ -37,34 +37,34 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
  
 ---
  
-### 2. Como será o processo para cadastrar um novo clientetorneio?
+### 2. Como será o processo para cadastrar um novo cliente?
  
 <p align = "justify">
-<b>XXXX</b> - O moderador deverá fazer login e...
+<b>Pedro Silvestre</b> - O cliente deve fazer login ao iniciar o aplicativo e caso não possua conta, o cliente pode se cadastrar.</p> 
  
-<b>YYYY</b> - O cliente...
+ <p align = "justify">
+<b>João Pedro</b> - O cadastro pode ser feito de duas formas: inserindo e-mail e criando uma senha no app ou fazendo login com a conta Google.</p>
  
-<b>WWWW</b> - Com o usuário logado, ele deverá...
-
-<b>ZZZZ</b> - O cliente...
- 
-<b>KKK</b> - O cliente...
- 
+<p align = "justify"> 
+<b>Rafael Viana</b> - Após o cadastro, com o usuário logado, o sistema redireciona o cliente para a página inicial e o cadastra automaticamente no banco de dados.
+ </p>
 ---
  
-### 3. Como será a forma de adicionar produtos?
+### 3. Como adicionar produtos?
  
 <p align = "justify">
-<b>XXXX</b> - O cliente ao cadastrar...
+<b>João Pedro</b> - Após o login, o cliente pode escolher entre duas opções de entrega: delivery (entregas rápidas de alimentos e similares) ou entregas grandes (produtos maiores como eletrônicos e roupas).
 </p>
  
 <p align = "justify">
-<b>YYYYY</b> - O produto tem...
+<b>Pedro Silvestre</b> - O cliente insere o tipo de produto a ser entregue e o link correspondente a sua venda numa plataforma.
 </p>
  
-<b>ZZZZ</b> - O produto....
+<b>Rafael Viana</b> - O sistema exibe as opções de entrega, incluindo prazo e custo.
  
-<b>XXXX</b> - O produto....
+<b>João Pedro</b> - O cliente pode confirmar o pedido ou cancelá-lo.
+
+<b>Pedro Silvestre</b> - Após confirmado o produto é adicionado a lista de pedidos em andamento, onde as informações referentes a entrega são exibidas como data da entrega final e  localização atual.
 
  
 ---
