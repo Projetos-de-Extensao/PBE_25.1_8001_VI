@@ -135,4 +135,4 @@ Através da aplicação da técnica, foi possível elicitar alguns dos primeiros
 ## Autor(es)
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| DD/MM/YYYY | 1.0 | Criação do documento | XXX XXXX, XXXX XXXX, YYY YYYY e ZZZ XXXX |
+| 27/03/2025 | 1.3 |  adição 2 e 3 | Pedro Henrique Silvestre, João Pedro Santana e Rafael Viana |
