@@ -69,27 +69,27 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 
 ---
 
-### 4. Outras perguntas pertinentes ao contexto
+### 4. Como será a forma de adicionar um restaurante aos favoritos?
 
 <p align = "justify">
-<b>XXXX</b> - Com a localização...
+<b>Pedro Silvestre</b> - Quando o cliente entrar no perfil de qualquer restaurante, no mesmo haverá um símbolo de uma estrela, ao toca-la ou fazer click caso esteja em computador, a estrela mudara de cor para amarelo que dirá que agora o restaurante estará salvo ao restaurantes favoritos.
 </p>
 
-<b>YYYY</b> - O cliente...
+<b>Rafael Vianna</b> - O cliente poderá acessar os seus restaurantes em favoritos tocando no ícone de uma estrela que estará na home da pagina.
 
-<b>ZZZ</b> - O cliente...
+<b>João Pedro</b> - O cliente também poderá tirar um restaurantes dos favoritos quando quiser.
 
 ---
 
 ### 5. Existe a possibilidade de cadastrar mais de um endereço?
 <p align = "justify">
-<b>XXXX</b> Na página principal do aplicativo, haverá um ícone de uma engrenagem. Ao selecionar esse ícone, o usuário será redirecionado para outra página, onde encontrará uma área chamada "Endereço". Ao selecionar essa área, o usuário entrará em uma página onde poderá ver o endereço cadastrado, além de ter a opção de remover o endereço ou adicionar um novo.
+<b>Rafael Viana</b>- Na página principal do aplicativo, haverá um ícone de uma engrenagem. Ao selecionar esse ícone, o usuário será redirecionado para outra página, onde encontrará uma área chamada "Endereço". Ao selecionar essa área, o usuário entrará em uma página onde poderá ver o endereço cadastrado, além de ter a opção de remover o endereço ou adicionar um novo.
 </p>
-<b>YYYY</b> O usuário poderá solicitar pedidos simultâneos para até 2 endereços diferentes.
+<b>João Pedro</b> - O usuário poderá solicitar pedidos simultâneos para até 2 endereços diferentes.
 
-<b>ZZZZ</b> O usuário terá a possibilidade de registrar um dos endereços como principal.
+<b>Pedro Silvestre</b> - O usuário terá a possibilidade de registrar um dos endereços como principal.
 
-<b>WWWWW</b> O usuário também poderá solicitar pedidos diretamente de sua localização atual, sem precisar cadastrar o endereço do local.
+<b>Rafael Vianna</b> - O usuário também poderá solicitar pedidos diretamente de sua localização atual, sem precisar cadastrar o endereço do local.
 </p>
 ---
 
