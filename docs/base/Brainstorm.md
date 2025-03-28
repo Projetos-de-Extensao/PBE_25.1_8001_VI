@@ -95,11 +95,12 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 
 ### 6. Quais informações seriam interessante para o cliente?
 <p align = "justify">
-   <b>XXX</b> - Informações...
+   <b>João Pedro Santana</b> - O usuário poderá acompanhar o seu pedido em tempo real, e terá acesso a todas as informações do pedido, como por exemplo: Uma estimativa de quando vai chegar o pedido, localização de onde está o mesmo e de que forma está sendo entregue o pedido.
 </p>
-   <b>ZZZZ</b> - O cliente usuário poderá acessar informações...
+   <b>Pedro Silvestre</b> - Caso houver algum problema com o pedido, o usuário será imediatamente notificado do sucedido e terá as opções de solicitar o envio de um novo pedido, sem ter que pagar novamente ou solicitar um reembolso.
 
-   <b>WWWWs</b> - O usuário poderá ver scouts de partidas do torneio, ver as regras dos torneios, locais e data das partidas.
+   <b>Rafael Vianna</b> - O cliente terá total liberdade de poder cancelar o seu pedido no momento que ele quiser, independentemente de qualquer outro fator. 
+
 
 </p>
 
@@ -136,3 +137,4 @@ Através da aplicação da técnica, foi possível elicitar alguns dos primeiros
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
 | 27/03/2025 | 1.3 |  adição 2 e 3 | Pedro Henrique Silvestre, João Pedro Santana e Rafael Viana |
+| 27/03/2025 | 1.4 |  adição 4, 5 e 6 | Pedro Henrique Silvestre, João Pedro Santana e Rafael Viana |
