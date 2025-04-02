@@ -1,0 +1,14 @@
+site_name: My Docs
+
+theme:
+  name: material
+  palette:
+    primary: black
+    accent: deep purple
+    scheme: slate
+
+
+plugins:
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
