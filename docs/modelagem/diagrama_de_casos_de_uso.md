@@ -24,45 +24,85 @@ legend{
 @startuml
 
 actor :Cliente: as A
+actor :Sistema: as S
 usecase "cadastro de usuario" #white
 usecase "login de cadastro" #white
 usecase "e-mail e senha" #white
 usecase "conta google" #white
 usecase "realizar pedidos" #white
 usecase "sem endereco" #white
-usecase "pedir a 2 enderecos" #white
+usecase "pedir ate 2 enderecos" #white
 usecase "editar dados pessoais" #white
 usecase "cadastrar mais endereco" #white
 usecase "pesquisar produtos" #white
 usecase "adiciona produto" #white
 usecase "remover produto" #white
-usecase "tipo de entrega" #white
 usecase "rapido" #white
 usecase "grande" #white
+usecase "rastrear pedidos" #white
+usecase "calcular tempo de entrega" #white
+usecase "exibir status do pedido" #white
+usecase "exibe restaurantes favoritos" #white
+usecase "processar pagamento" #white
+usecase "exibir frete" #white
+usecase "exibir tipos de entrega" #white
+usecase "cancela pedido" #white
+usecase "adiciona restaurante favorito" #white
+usecase "remove restaurante favorito" #white
+usecase "realizar pagamento" #white
+usecase "PIX" #white
+usecase "Cartão de débito" #white
+usecase "Cartão de crédito" #white
+usecase "seleciona tipo de entrega" #white
+usecase "notificar atrasos" #white
+
 
 A ---> (cadastro de usuario)
 
-A ---> (login de cadastro)
-(login de cadastro) --> (e-mail e senha): <<extend>>
+A --left-> (login de cadastro)
+(login de cadastro) -left-> (e-mail e senha): <<extend>>
 (login de cadastro) --> (conta google): <<extend>>
 
 A ---> (realizar pedidos)
 (realizar pedidos) --> (sem endereco): <<extend>>
-(realizar pedidos) --> (pedir a 2 enderecos): <<extend>>
+(realizar pedidos) --> (pedir ate 2 enderecos): <<extend>>
 
-A ---> (editar dados pessoais)
+A --up-> (editar dados pessoais)
 
-A ---> (cadastrar mais endereco)
+A --up-> (cadastrar mais endereco)
 
-A ---> (pesquisar produtos)
+A --up-> (pesquisar produtos)
 
-A ---> (adiciona produto)
+A --up-> (adiciona produto)
 
-A ---> (remover produto)
+A --up-> (remover produto)
 
-A ---> (tipo de entrega)
-(tipo de entrega) --> (rapido): <<extend>>
-(tipo de entrega) --> (grande): <<extend>>
+A --up-> (cancela pedido)
+
+A -up--> (adiciona restaurante favorito)
+
+A ---> (remove restaurante favorito)
+
+A ---> (realizar pagamento)
+(realizar pagamento) --> (Cartão de crédito): <<extend>>
+(realizar pagamento) --> (PIX): <<extend>>
+(realizar pagamento) --> (Cartão de débito): <<extend>>
+
+
+A ---> (seleciona tipo de entrega)
+(seleciona tipo de entrega) --> (rapido): <<extend>>
+(seleciona tipo de entrega) --> (grande): <<extend>>
+
+S -up--> (rastrear pedidos)
+S -up--> (calcular tempo de entrega)
+S -up--> (exibir status do pedido)
+S -up--> (exibe restaurantes favoritos)
+S ---> (processar pagamento)
+S ---> (exibir frete)
+S ---> (notificar atrasos)
+S ---> (exibir tipos de entrega)
+
+
 @enduml
 ```
 
@@ -78,7 +118,4 @@ A ---> (tipo de entrega)
 
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| 21/09/20 | 1.0 | Criação do documento | João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan |
-| 28/09/20 | 1.1 | Ajustes no documento | João Pedro e Renan Cristyan |
-| 28/09/20 | 1.2 | Adicionado diagrama de classes 1.1 | João Pedro e Renan Cristyan |
-| 26/10/20 | 2.0 | Adicionado diagrama de classes 2.0 | João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan |
+| 08/04/25 | 1.0 | Criação do documento | João Pedro, Pedro Silvestre |
