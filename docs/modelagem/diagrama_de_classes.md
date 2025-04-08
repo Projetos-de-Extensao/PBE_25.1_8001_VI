@@ -7,7 +7,7 @@ title: Diagrama de Classes
 ## Introdução
 
 <p align = "justify">
-O diagrama de classes UML é um diagrama que mostra a estrutura do sistema desenhado no nível de classes e interfaces, ilustra as funcionalidades, dependências e relacionamentos de cada elemento. Pode ser vista como uma representação visual da arquitetura de um sistema. 
+O diagrama de classes UML é um diagrama que mostra a estrutura do sistema desenhado no nível de classes e interfaces, ilustra as funcionalidades, dependências e relacionamentos de cada elemento. Pode ser vista como uma representação visual da arquitetura de um sistema.
 </p>
 
 ## Metodologia
@@ -23,10 +23,30 @@ Para a criação da primeira versão do diagrama de classes, a equipe utilizou o
 
 ### Versão 1.0
 
+```puml
+@startuml
+
+title Diagrama de classes
+
+class Pedido
+class Cliente
+class Motorista
+class Item
+class Pagamento
+class Avaliação
+class Restaurante
+
+Cliente <|-down- Avaliação
+Cliente <|-left- Pedido
+Pedido <|-down- Item
+
+Pedido <|-up- Pagamento
+Motorista <|-down- Pedido
+Restaurante <|- Pedido
 
 
-![![Diagrama de Classes](../assets/diagrama_de_classes/diagrama_de_classes.png)](../assets/diagrama_de_classes/diagrama_de_classes.png)
-
+@enduml
+```
 ### Versão 1.1
 ![![Diagrama de Classes](../assets/diagrama_de_classes/diagrama_de_classes_1.1.png)](../assets/diagrama_de_classes/diagrama_de_classes_1.1.png)
 
