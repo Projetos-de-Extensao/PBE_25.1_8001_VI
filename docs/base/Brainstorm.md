@@ -103,27 +103,40 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 
 
 </p>
-
-### Requisitos elicitados
-
+### Requisitos Funcionais
 |ID|Descrição|
 |----|-------------|
-|BS01| O cliente...|
-|BS02| O cliente...|
-|BS03| O cliente...|
-|BS04| O cliente...|
-|BS05| O cliente...|
-|BS06| O cliente...|
-|BS07| O cliente...|
-|BS08| O cliente...|
-|BS09| O cliente...|
-|BS10| O produto...|
-|BS11| O produto...|
-|BS12| O produto...|
-|BS13| O produto...|
-|BS14| O produto...|
-|BS15| O produto...|
+|BS01| O sistema deve permitir o cadastro de novos usuários com dados pessoais, endereço e forma de pagamento.|
+|BS02| O sistema deve permitir que o usuário se cadastre com e-mail/senha ou via login com conta Google.|
+|BS03| O sistema deve permitir que o usuário edite seus dados pessoais e endereço a qualquer momento.|
+|BS04| O sistema deve permitir que o usuário cadastre múltiplos endereços.|
+|BS05| O sistema deve permitir a realização de pedidos com base na localização atual, sem necessidade de cadastro de endereço.|
+|BS06| O sistema deve permitir que o usuário realize pedidos simultâneos para até dois endereços diferentes.|
+|BS07| O sistema deve permitir a pesquisa de produtos com descrição, imagem e preço.|
+|BS08| O sistema deve permitir que o usuário adicione produtos ao carrinho e os remova antes da confirmação do pedido.|
+|BS09| O sistema deve exibir os tipos de entrega (delivery rápido ou entrega grande), incluindo prazos e custos.|
+|BS10| O sistema deve permitir que o usuário confirme, cancele e acompanhe pedidos em tempo real.|
+|BS11| O sistema deve mostrar a localização atual do pedido e uma estimativa de chegada.|
+|BS12| O sistema deve exibir informações de status do pedido (ex: “Em preparo”, “A caminho”, “Entregue”).|
+|BS13| O sistema deve permitir que o cliente cancele o pedido a qualquer momento.|
+|BS14| O sistema deve permitir adicionar e remover restaurantes dos favoritos.|
+|BS15| O sistema deve disponibilizar os restaurantes favoritos na tela principal por meio de um ícone específico.|
+|BS16| O sistema deve aceitar diferentes formas de pagamento (ex: cartão, Pix, etc.).|
+|BS17| O sistema deve processar o pagamento e exibir uma confirmação ao usuário.|
+|BS18| O sistema deve exibir o cálculo do frete antes da finalização da compra.|
+|BS19| O sistema deve notificar o usuário também em caso de falhas, atrasos ou mudanças no processo de entrega.|
 
+
+### Requisitos Não Funcionais
+
+
+|ID|Descrição|
+|-----|-------------|
+|NBS01| O sistema deve ser responsivo, funcionando bem em smartphones e desktops.|
+|NBS02| O sistema deve apresentar uma interface amigável e acessível para usuários com baixa familiaridade digital.|
+|NBS03| O sistema deve apresentar tempo de resposta inferior a 2 segundos para carregamento de páginas e ações críticas.|
+|NBS04| O sistema deve garantir a segurança dos dados por meio de HTTPS, autenticação segura e criptografia.|
+|NBS05| O sistema deve ser escalável para suportar aumento de usuários em horários de pico.|
 ## Conclusão
 <p align = "justify">
 Através da aplicação da técnica, foi possível elicitar alguns dos primeiros requisitos do projeto.
