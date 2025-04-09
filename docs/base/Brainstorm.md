@@ -104,7 +104,11 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 
 </p>
 
+
+
 ### Requisitos Funcionais
+
+
 |ID|Descrição|
 |----|-------------|
 |BS01| O sistema deve permitir o cadastro de novos usuários com dados pessoais, endereço e forma de pagamento.|
@@ -128,6 +132,8 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 |BS19| O sistema deve notificar o usuário também em caso de falhas, atrasos ou mudanças no processo de entrega.|
 
 
+
+
 ### Requisitos Não Funcionais
 
 
@@ -138,6 +144,7 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via aula presencia
 |NBS03| O sistema deve apresentar tempo de resposta inferior a 2 segundos para carregamento de páginas e ações críticas.|
 |NBS04| O sistema deve garantir a segurança dos dados por meio de HTTPS, autenticação segura e criptografia.|
 |NBS05| O sistema deve ser escalável para suportar aumento de usuários em horários de pico.|
+
 
 ## Conclusão
 <p align = "justify">
