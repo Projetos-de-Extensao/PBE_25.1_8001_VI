@@ -1,0 +1,1271 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../das/">
+      
+      
+        <link rel="next" href="../diagrama_de_classes/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Diagrama de Casos de uso - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diagrama-de-casos-de-usos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Diagrama de Casos de uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     Iniciação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+             Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iniciação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/5w2h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5W2H
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/Brainstorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brainstorm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/documento_de_visao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/entrevista/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entrevista
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/mapa_mental/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapas Mentais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/metodologia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metodologia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/pesquisa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pesquisa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/prototipo_alta_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/prototipo_baixa_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+      Elaboração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+              Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elaboração
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Arquitetura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Diagramas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Diagramas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Diagrama de Casos de uso
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Casos de uso
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-casos-de-usos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de Casos de usos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrama de Casos de usos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versao-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versão 1.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autor(es)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrama_de_classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+       Construção
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+               Construção
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../___Constru%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Construção
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+        Transição
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+                Transição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../____Transi%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+         Iteração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+                 Iteração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Util
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Util
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../util/doc_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Titulo do documento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-casos-de-usos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de Casos de usos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrama de Casos de usos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versao-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versão 1.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autor(es)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Diagrama de Casos de uso</h1>
+
+<h2 id="diagrama-de-casos-de-usos">Diagrama de Casos de usos</h2>
+<h3 id="versao-10">Versão 1.0</h3>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="596px" preserveAspectRatio="xMidYMid meet" style="width:2331px;height:596px;background:#FFFFFF;" version="1.1" viewBox="0 0 2331 596" width="2331px" zoomAndPan="magnify" class="diagram"><defs/><g><g class="entity" data-entity="A" data-source-line="17" data-uid="ent0002" id="entity_A"><ellipse cx="1603.9418" cy="187.4" fill="#F1F1F1" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M1603.9418,195.4 L1603.9418,222.4 M1590.9418,203.4 L1616.9418,203.4 M1603.9418,222.4 L1590.9418,237.4 M1603.9418,222.4 L1616.9418,237.4" fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.1436" x="1579.37" y="251.8951">Cliente</text></g><g class="entity" data-entity="S" data-source-line="18" data-uid="ent0003" id="entity_S"><ellipse cx="469.9448" cy="187.4" fill="#F1F1F1" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M469.9448,195.4 L469.9448,222.4 M456.9448,203.4 L482.9448,203.4 M469.9448,222.4 L456.9448,237.4 M469.9448,222.4 L482.9448,237.4" fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.3896" x="441.75" y="251.8951">Sistema</text></g><g class="entity" data-entity="cadastro de usuario" data-source-line="19" data-uid="ent0004" id="entity_cadastro de usuario"><ellipse cx="2170.9449" cy="448.079" fill="#FFFFFF" rx="83.5949" ry="19.119" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139.0771" x="2101.4063" y="452.7274">cadastro de usuario</text></g><g class="entity" data-entity="login de cadastro" data-source-line="20" data-uid="ent0005" id="entity_login de cadastro"><ellipse cx="1366.9354" cy="217.0471" fill="#FFFFFF" rx="76.0854" ry="17.6171" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121.3516" x="1306.2596" y="221.6955">login de cadastro</text></g><g class="entity" data-entity="e-mail e senha" data-source-line="21" data-uid="ent0006" id="entity_e-mail e senha"><ellipse cx="1124.937" cy="217.0454" fill="#FFFFFF" rx="68.827" ry="16.1654" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.4072" x="1073.2334" y="221.6938">e-mail e senha</text></g><g class="entity" data-entity="conta google" data-source-line="22" data-uid="ent0007" id="entity_conta google"><ellipse cx="1340.9381" cy="347.4196" fill="#FFFFFF" rx="64.0981" ry="15.2196" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.0615" x="1295.4073" y="352.0681">conta google</text></g><g class="entity" data-entity="realizar pedidos" data-source-line="23" data-uid="ent0008" id="entity_realizar pedidos"><ellipse cx="1286.9356" cy="448.0811" fill="#FFFFFF" rx="72.2056" ry="16.8411" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.8838" x="1230.9938" y="452.7296">realizar pedidos</text></g><g class="entity" data-entity="sem endereco" data-source-line="24" data-uid="ent0009" id="entity_sem endereco"><ellipse cx="1323.9377" cy="569.9395" fill="#FFFFFF" rx="67.3477" ry="15.8695" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.6133" x="1274.1311" y="574.588">sem endereco</text></g><g class="entity" data-entity="pedir ate 2 enderecos" data-source-line="25" data-uid="ent0010" id="entity_pedir ate 2 enderecos"><ellipse cx="1131.9431" cy="569.9426" fill="#FFFFFF" rx="90.0631" ry="20.4126" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.8838" x="1055.0012" y="574.5911">pedir ate 2 enderecos</text></g><g class="entity" data-entity="editar dados pessoais" data-source-line="26" data-uid="ent0011" id="entity_editar dados pessoais"><ellipse cx="2235.9391" cy="30.9518" fill="#FFFFFF" rx="89.5591" ry="20.3118" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.7422" x="2159.568" y="35.6002">editar dados pessoais</text></g><g class="entity" data-entity="cadastrar mais endereco" data-source-line="27" data-uid="ent0012" id="entity_cadastrar mais endereco"><ellipse cx="2011.9397" cy="30.9519" fill="#FFFFFF" rx="99.3097" ry="22.2619" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174.5352" x="1924.6721" y="35.6004">cadastrar mais endereco</text></g><g class="entity" data-entity="pesquisar produtos" data-source-line="28" data-uid="ent0013" id="entity_pesquisar produtos"><ellipse cx="1795.9438" cy="30.9548" fill="#FFFFFF" rx="81.7738" ry="18.7548" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.8389" x="1728.5243" y="35.6032">pesquisar produtos</text></g><g class="entity" data-entity="adiciona produto" data-source-line="29" data-uid="ent0014" id="entity_adiciona produto"><ellipse cx="1603.9383" cy="30.9457" fill="#FFFFFF" rx="74.8783" ry="17.3757" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.4326" x="1544.722" y="35.5941">adiciona produto</text></g><g class="entity" data-entity="remover produto" data-source-line="30" data-uid="ent0015" id="entity_remover produto"><ellipse cx="1418.9382" cy="30.9476" fill="#FFFFFF" rx="74.9882" ry="17.3976" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6992" x="1359.5886" y="35.5961">remover produto</text></g><g class="entity" data-entity="rapido" data-source-line="31" data-uid="ent0016" id="entity_rapido"><ellipse cx="2058.9411" cy="569.9436" fill="#FFFFFF" rx="34.5111" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.5635" x="2036.6594" y="574.5921">rapido</text></g><g class="entity" data-entity="grande" data-source-line="32" data-uid="ent0017" id="entity_grande"><ellipse cx="1950.9388" cy="569.9436" fill="#FFFFFF" rx="38.0688" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.5947" x="1926.1414" y="574.5921">grande</text></g><g class="entity" data-entity="rastrear pedidos" data-source-line="33" data-uid="ent0018" id="entity_rastrear pedidos"><ellipse cx="799.9415" cy="30.9483" fill="#FFFFFF" rx="73.5915" ry="17.1183" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.2949" x="742.294" y="35.5967">rastrear pedidos</text></g><g class="entity" data-entity="calcular tempo de entrega" data-source-line="34" data-uid="ent0019" id="entity_calcular tempo de entrega"><ellipse cx="586.9379" cy="30.9496" fill="#FFFFFF" rx="104.4479" ry="23.2896" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185.8145" x="494.0307" y="35.598">calcular tempo de entrega</text></g><g class="entity" data-entity="exibir status do pedido" data-source-line="35" data-uid="ent0020" id="entity_exibir status do pedido"><ellipse cx="353.945" cy="30.953" fill="#FFFFFF" rx="93.165" ry="21.033" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160.8701" x="273.5099" y="35.6014">exibir status do pedido</text></g><g class="entity" data-entity="exibe restaurantes favoritos" data-source-line="36" data-uid="ent0021" id="entity_exibe restaurantes favoritos"><ellipse cx="115.9401" cy="30.948" fill="#FFFFFF" rx="109.9401" ry="24.388" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197.75" x="17.0651" y="35.5965">exibe restaurantes favoritos</text></g><g class="entity" data-entity="processar pagamento" data-source-line="37" data-uid="ent0022" id="entity_processar pagamento"><ellipse cx="195.9437" cy="448.0847" fill="#FFFFFF" rx="89.6737" ry="20.3347" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.002" x="119.4427" y="452.7332">processar pagamento</text></g><g class="entity" data-entity="exibir frete" data-source-line="38" data-uid="ent0023" id="entity_exibir frete"><ellipse cx="377.9381" cy="448.0836" fill="#FFFFFF" rx="57.5681" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.1709" x="339.3526" y="452.7321">exibir frete</text></g><g class="entity" data-entity="exibir tipos de entrega" data-source-line="39" data-uid="ent0024" id="entity_exibir tipos de entrega"><ellipse cx="562.9392" cy="448.0758" fill="#FFFFFF" rx="92.3792" ry="20.8758" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.1064" x="483.386" y="452.7243">exibir tipos de entrega</text></g><g class="entity" data-entity="cancela pedido" data-source-line="40" data-uid="ent0025" id="entity_cancela pedido"><ellipse cx="1238.9426" cy="30.9485" fill="#FFFFFF" rx="69.8926" ry="16.3785" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106.1074" x="1185.8889" y="35.597">cancela pedido</text></g><g class="entity" data-entity="adiciona restaurante favorito" data-source-line="41" data-uid="ent0026" id="entity_adiciona restaurante favorito"><ellipse cx="1020.9388" cy="30.9518" fill="#FFFFFF" rx="112.7588" ry="24.9518" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="203.834" x="919.0218" y="35.6002">adiciona restaurante favorito</text></g><g class="entity" data-entity="remove restaurante favorito" data-source-line="42" data-uid="ent0027" id="entity_remove restaurante favorito"><ellipse cx="1503.9351" cy="448.083" fill="#FFFFFF" rx="110.2151" ry="24.443" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198.3447" x="1404.7628" y="452.7315">remove restaurante favorito</text></g><g class="entity" data-entity="realizar pagamento" data-source-line="43" data-uid="ent0028" id="entity_realizar pagamento"><ellipse cx="1731.9384" cy="448.0777" fill="#FFFFFF" rx="82.6884" ry="18.9377" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136.9717" x="1663.4525" y="452.7261">realizar pagamento</text></g><g class="entity" data-entity="PIX" data-source-line="44" data-uid="ent0029" id="entity_PIX"><ellipse cx="1853.941" cy="569.9436" fill="#FFFFFF" rx="18.671" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22.1621" x="1842.8599" y="574.5921">PIX</text></g><g class="entity" data-entity="Cartão de débito" data-source-line="45" data-uid="ent0030" id="entity_Cartão de débito"><ellipse cx="1537.9446" cy="569.9369" fill="#FFFFFF" rx="74.4846" ry="17.2969" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.4756" x="1479.2068" y="574.5854">Cartão de débito</text></g><g class="entity" data-entity="Cartão de crédito" data-source-line="46" data-uid="ent0031" id="entity_Cartão de crédito"><ellipse cx="1723.9423" cy="569.9445" fill="#FFFFFF" rx="76.3723" ry="17.6745" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.042" x="1662.9213" y="574.5929">Cartão de crédito</text></g><g class="entity" data-entity="seleciona tipo de entrega" data-source-line="47" data-uid="ent0032" id="entity_seleciona tipo de entrega"><ellipse cx="1950.9427" cy="448.0825" fill="#FFFFFF" rx="101.1127" ry="22.6225" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178.5068" x="1861.6893" y="452.731">seleciona tipo de entrega</text></g><g class="entity" data-entity="notificar atrasos" data-source-line="48" data-uid="ent0033" id="entity_notificar atrasos"><ellipse cx="762.9415" cy="448.0763" fill="#FFFFFF" rx="72.9315" ry="16.9863" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.6748" x="706.1041" y="452.7247">notificar atrasos</text></g><g class="link" data-entity-1="A" data-entity-2="cadastro de usuario" data-source-line="51" data-uid="lnk34" id="link_A_cadastro de usuario"><path d="M1628.67,228.04 C1717.55,263.94 2015.7968,384.4125 2125.4768,428.7225" fill="none" id="A-to-cadastro de usuario" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2131.04,430.97,2124.1936,423.89,2126.404,429.0971,2121.1969,431.3076,2131.04,430.97" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="login de cadastro" data-entity-2="A" data-source-line="53" data-uid="lnk36" id="link_login de cadastro_A"><path d="M1449.32,217.05 C1494.6,217.05 1533.88,217.05 1579.16,217.05" fill="none" id="login de cadastro-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1443.32,217.05,1452.32,221.05,1448.32,217.05,1452.32,213.05,1443.32,217.05" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="e-mail e senha" data-entity-2="login de cadastro" data-source-line="54" data-uid="lnk38" id="link_e-mail e senha_login de cadastro"><path d="M1199.96,217.05 C1230.14,217.05 1259.64,217.05 1290.6,217.05" fill="none" id="e-mail e senha-backto-login de cadastro" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1193.96,217.05,1202.96,221.05,1198.96,217.05,1202.96,213.05,1193.96,217.05" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1211.81" y="210.1169">«extend»</text></g><g class="link" data-entity-1="login de cadastro" data-entity-2="conta google" data-source-line="55" data-uid="lnk39" id="link_login de cadastro_conta google"><path d="M1363.49,235.1 C1358.32,260.6 1349.8595,302.3691 1345.0395,326.1991" fill="none" id="login de cadastro-to-conta google" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1343.85,332.08,1349.5549,324.0516,1344.8413,327.1792,1341.7137,322.4656,1343.85,332.08" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1353.94" y="298.2669">«extend»</text></g><g class="link" data-entity-1="A" data-entity-2="realizar pedidos" data-source-line="57" data-uid="lnk40" id="link_A_realizar pedidos"><path d="M1578.9,239.62 C1544.63,268.78 1480.76,321.81 1422.94,362.64 C1386.05,388.69 1346.3719,412.6654 1318.5319,428.9154" fill="none" id="A-to-realizar pedidos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1313.35,431.94,1323.1392,430.8577,1317.6682,429.4195,1319.1064,423.9485,1313.35,431.94" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="realizar pedidos" data-entity-2="sem endereco" data-source-line="58" data-uid="lnk41" id="link_realizar pedidos_sem endereco"><path d="M1291.93,465.25 C1299.11,488.5 1310.4905,525.3669 1317.4905,548.0469" fill="none" id="realizar pedidos-to-sem endereco" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1319.26,553.78,1320.4279,544.0006,1317.7854,549.0024,1312.7837,546.3599,1319.26,553.78" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1308.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pedidos" data-entity-2="pedir ate 2 enderecos" data-source-line="59" data-uid="lnk42" id="link_realizar pedidos_pedir ate 2 enderecos"><path d="M1266.99,464.51 C1238.7,486.38 1191.7164,522.7096 1161.1464,546.3496" fill="none" id="realizar pedidos-to-pedir ate 2 enderecos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1156.4,550.02,1165.9665,547.6786,1160.3553,546.9613,1161.0726,541.3501,1156.4,550.02" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1215.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="editar dados pessoais" data-entity-2="A" data-source-line="61" data-uid="lnk44" id="link_editar dados pessoais_A"><path d="M2176.5694,49.2478 C2046.1694,87.2278 1722.07,181.64 1628.83,208.8" fill="none" id="editar dados pessoais-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2182.33,47.57,2172.5705,46.2463,2177.5295,48.9682,2174.8076,53.9272,2182.33,47.57" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="cadastrar mais endereco" data-entity-2="A" data-source-line="63" data-uid="lnk46" id="link_cadastrar mais endereco_A"><path d="M1963.5811,53.7681 C1878.4711,92.1781 1696.1,174.46 1628.66,204.9" fill="none" id="cadastrar mais endereco-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1969.05,51.3,1959.2013,51.3562,1964.4926,53.3567,1962.4921,58.648,1969.05,51.3" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="pesquisar produtos" data-entity-2="A" data-source-line="65" data-uid="lnk48" id="link_pesquisar produtos_A"><path d="M1773.1995,53.7529 C1738.5695,86.9629 1668.02,154.61 1628.89,192.12" fill="none" id="pesquisar produtos-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1777.53,49.6,1768.2656,52.9424,1773.9213,53.0608,1773.8029,58.7164,1777.53,49.6" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="adiciona produto" data-entity-2="A" data-source-line="67" data-uid="lnk50" id="link_adiciona produto_A"><path d="M1603.94,54.61 C1603.94,83.82 1603.94,138.94 1603.94,178.69" fill="none" id="adiciona produto-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1603.94,48.61,1599.94,57.61,1603.94,53.61,1607.94,57.61,1603.94,48.61" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="remover produto" data-entity-2="A" data-source-line="69" data-uid="lnk52" id="link_remover produto_A"><path d="M1439.6131,52.5222 C1472.1531,84.9022 1540.75,153.17 1579.16,191.39" fill="none" id="remover produto-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1435.36,48.29,1438.9182,57.4736,1438.9042,51.8168,1444.5611,51.8029,1435.36,48.29" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="cancela pedido" data-entity-2="A" data-source-line="71" data-uid="lnk54" id="link_cancela pedido_A"><path d="M1272.6369,48.9424 C1341.9769,83.9224 1513.94,170.66 1579.28,203.61" fill="none" id="cancela pedido-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1267.28,46.24,1273.5138,53.8649,1271.7441,48.492,1277.117,46.7223,1267.28,46.24" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="adiciona restaurante favorito" data-entity-2="A" data-source-line="73" data-uid="lnk56" id="link_adiciona restaurante favorito_A"><path d="M1090.1614,53.8071 C1217.5014,94.0271 1493.47,181.17 1578.9,208.14" fill="none" id="adiciona restaurante favorito-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1084.44,52,1091.8174,58.5249,1089.2078,53.5059,1094.2268,50.8964,1084.44,52" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="A" data-entity-2="remove restaurante favorito" data-source-line="75" data-uid="lnk57" id="link_A_remove restaurante favorito"><path d="M1587.54,255.61 C1566.76,303.2 1533.9706,378.2912 1516.6306,418.0112" fill="none" id="A-to-remove restaurante favorito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1514.23,423.51,1521.4967,416.8621,1516.2305,418.9276,1514.1649,413.6614,1514.23,423.51" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="A" data-entity-2="realizar pagamento" data-source-line="77" data-uid="lnk58" id="link_A_realizar pagamento"><path d="M1624.93,255.61 C1652.81,305.49 1698.0132,386.3723 1718.8732,423.7023" fill="none" id="A-to-realizar pagamento" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1721.8,428.94,1720.9016,419.1322,1719.361,424.5752,1713.9179,423.0347,1721.8,428.94" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="Cartão de crédito" data-source-line="78" data-uid="lnk59" id="link_realizar pagamento_Cartão de crédito"><path d="M1730.73,467.29 C1729.19,490.34 1726.9614,523.7534 1725.4614,546.1234" fill="none" id="realizar pagamento-to-Cartão de crédito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1725.06,552.11,1729.6532,543.3978,1725.3945,547.1212,1721.6711,542.8625,1725.06,552.11" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1728.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="PIX" data-source-line="79" data-uid="lnk60" id="link_realizar pagamento_PIX"><path d="M1756.19,466.51 C1769.38,476.45 1785.67,489.49 1798.94,502.52 C1816.78,520.04 1831.1556,538.1658 1841.4956,551.9858" fill="none" id="realizar pagamento-to-PIX" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1845.09,556.79,1842.9011,547.1875,1842.0946,552.7865,1836.4956,551.98,1845.09,556.79" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1813.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="Cartão de débito" data-source-line="80" data-uid="lnk61" id="link_realizar pagamento_Cartão de débito"><path d="M1704.14,466.25 C1666.43,489.56 1604.684,527.6958 1568.324,550.1658" fill="none" id="realizar pagamento-to-Cartão de débito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1563.22,553.32,1572.9788,551.9914,1567.4733,550.6915,1568.7732,545.186,1563.22,553.32" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1640.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="A" data-entity-2="seleciona tipo de entrega" data-source-line="83" data-uid="lnk62" id="link_A_seleciona tipo de entrega"><path d="M1628.9,234.52 C1690.74,275.34 1846.0325,377.8347 1914.3425,422.9247" fill="none" id="A-to-seleciona tipo de entrega" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1919.35,426.23,1914.0423,417.9337,1915.1771,423.4756,1909.6352,424.6103,1919.35,426.23" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="seleciona tipo de entrega" data-entity-2="rapido" data-source-line="84" data-uid="lnk63" id="link_seleciona tipo de entrega_rapido"><path d="M1982.97,469.95 C1995.42,479.02 2009.23,490.35 2019.94,502.52 C2034.25,518.79 2043.4797,535.6432 2050.2297,549.8132" fill="none" id="seleciona tipo de entrega-to-rapido" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2052.81,555.23,2052.5507,545.3846,2050.6597,550.716,2045.3283,548.825,2052.81,555.23" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="2032.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="seleciona tipo de entrega" data-entity-2="grande" data-source-line="85" data-uid="lnk64" id="link_seleciona tipo de entrega_grande"><path d="M1950.94,471.07 C1950.94,495.53 1950.94,528.33 1950.94,548.96" fill="none" id="seleciona tipo de entrega-to-grande" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1950.94,554.96,1954.94,545.96,1950.94,549.96,1946.94,545.96,1950.94,554.96" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1951.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="rastrear pedidos" data-entity-2="S" data-source-line="87" data-uid="lnk66" id="link_rastrear pedidos_S"><path d="M767.4104,50.0935 C705.6504,84.5535 560.87,165.32 498.19,200.29" fill="none" id="rastrear pedidos-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="772.65,47.17,762.8416,48.0622,768.2837,49.6063,766.7396,55.0483,772.65,47.17" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="calcular tempo de entrega" data-entity-2="S" data-source-line="88" data-uid="lnk68" id="link_calcular tempo de entrega_S"><path d="M569.6115,59.2237 C550.0415,90.0137 517.61,141.05 493.85,178.44" fill="none" id="calcular tempo de entrega-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="572.83,54.16,564.6265,59.6099,570.1479,58.3798,571.3781,63.9013,572.83,54.16" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="exibir status do pedido" data-entity-2="S" data-source-line="89" data-uid="lnk70" id="link_exibir status do pedido_S"><path d="M369.7779,57.0768 C388.8579,87.3668 422.16,140.23 446.28,178.51" fill="none" id="exibir status do pedido-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="366.58,52,367.9924,61.7471,369.2449,56.2306,374.7614,57.4832,366.58,52" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="exibe restaurantes favoritos" data-entity-2="S" data-source-line="90" data-uid="lnk72" id="link_exibe restaurantes favoritos_S"><path d="M163.2631,56.5585 C236.1531,94.4685 378.93,168.72 441.27,201.14" fill="none" id="exibe restaurantes favoritos-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="157.94,53.79,164.0789,61.4915,162.3759,56.0971,167.7703,54.3941,157.94,53.79" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="processar pagamento" data-source-line="91" data-uid="lnk73" id="link_S_processar pagamento"><path d="M441.39,241.91 C386.7,287.63 272.7936,382.8421 223.1436,424.3421" fill="none" id="S-to-processar pagamento" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="218.54,428.19,228.0107,425.4872,222.3764,424.9834,222.8801,419.349,218.54,428.19" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="exibir frete" data-source-line="92" data-uid="lnk74" id="link_S_exibir frete"><path d="M454.85,255.61 C433.95,307.65 399.4359,393.5522 385.6259,427.9422" fill="none" id="S-to-exibir frete" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="383.39,433.51,390.4557,426.6488,385.2532,428.8701,383.0319,423.6677,383.39,433.51" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="notificar atrasos" data-source-line="93" data-uid="lnk75" id="link_S_notificar atrasos"><path d="M498.57,240.43 C557.75,286.69 687.543,388.1446 738.313,427.8346" fill="none" id="S-to-notificar atrasos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="743.04,431.53,738.4131,422.8356,739.1009,428.4505,733.486,429.1383,743.04,431.53" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="exibir tipos de entrega" data-source-line="94" data-uid="lnk76" id="link_S_exibir tipos de entrega"><path d="M485.19,255.61 C505.08,304.6 536.9117,382.9912 552.4917,421.3412" fill="none" id="S-to-exibir tipos de entrega" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="554.75,426.9,555.0684,417.0563,552.8681,422.2677,547.6567,420.0674,554.75,426.9" style="stroke:#000000;stroke-width:1;"/></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="596px" preserveAspectRatio="xMidYMid meet" style="width:2331px;height:596px;background:#FFFFFF;" version="1.1" viewBox="0 0 2331 596" width="2331px" zoomAndPan="magnify" class="diagram"><defs/><g><g class="entity" data-entity="A" data-source-line="17" data-uid="ent0002" id="entity_A"><ellipse cx="1603.9418" cy="187.4" fill="#313139" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M1603.9418,195.4 L1603.9418,222.4 M1590.9418,203.4 L1616.9418,203.4 M1603.9418,222.4 L1590.9418,237.4 M1603.9418,222.4 L1616.9418,237.4" fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.1436" x="1579.37" y="251.8951">Cliente</text></g><g class="entity" data-entity="S" data-source-line="18" data-uid="ent0003" id="entity_S"><ellipse cx="469.9448" cy="187.4" fill="#313139" rx="8" ry="8" style="stroke:#000000;stroke-width:0.5;"/><path d="M469.9448,195.4 L469.9448,222.4 M456.9448,203.4 L482.9448,203.4 M469.9448,222.4 L456.9448,237.4 M469.9448,222.4 L482.9448,237.4" fill="none" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.3896" x="441.75" y="251.8951">Sistema</text></g><g class="entity" data-entity="cadastro de usuario" data-source-line="19" data-uid="ent0004" id="entity_cadastro de usuario"><ellipse cx="2170.9449" cy="448.079" fill="#FFFFFF" rx="83.5949" ry="19.119" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139.0771" x="2101.4063" y="452.7274">cadastro de usuario</text></g><g class="entity" data-entity="login de cadastro" data-source-line="20" data-uid="ent0005" id="entity_login de cadastro"><ellipse cx="1366.9354" cy="217.0471" fill="#FFFFFF" rx="76.0854" ry="17.6171" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121.3516" x="1306.2596" y="221.6955">login de cadastro</text></g><g class="entity" data-entity="e-mail e senha" data-source-line="21" data-uid="ent0006" id="entity_e-mail e senha"><ellipse cx="1124.937" cy="217.0454" fill="#FFFFFF" rx="68.827" ry="16.1654" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.4072" x="1073.2334" y="221.6938">e-mail e senha</text></g><g class="entity" data-entity="conta google" data-source-line="22" data-uid="ent0007" id="entity_conta google"><ellipse cx="1340.9381" cy="347.4196" fill="#FFFFFF" rx="64.0981" ry="15.2196" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.0615" x="1295.4073" y="352.0681">conta google</text></g><g class="entity" data-entity="realizar pedidos" data-source-line="23" data-uid="ent0008" id="entity_realizar pedidos"><ellipse cx="1286.9356" cy="448.0811" fill="#FFFFFF" rx="72.2056" ry="16.8411" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.8838" x="1230.9938" y="452.7296">realizar pedidos</text></g><g class="entity" data-entity="sem endereco" data-source-line="24" data-uid="ent0009" id="entity_sem endereco"><ellipse cx="1323.9377" cy="569.9395" fill="#FFFFFF" rx="67.3477" ry="15.8695" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.6133" x="1274.1311" y="574.588">sem endereco</text></g><g class="entity" data-entity="pedir ate 2 enderecos" data-source-line="25" data-uid="ent0010" id="entity_pedir ate 2 enderecos"><ellipse cx="1131.9431" cy="569.9426" fill="#FFFFFF" rx="90.0631" ry="20.4126" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.8838" x="1055.0012" y="574.5911">pedir ate 2 enderecos</text></g><g class="entity" data-entity="editar dados pessoais" data-source-line="26" data-uid="ent0011" id="entity_editar dados pessoais"><ellipse cx="2235.9391" cy="30.9518" fill="#FFFFFF" rx="89.5591" ry="20.3118" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.7422" x="2159.568" y="35.6002">editar dados pessoais</text></g><g class="entity" data-entity="cadastrar mais endereco" data-source-line="27" data-uid="ent0012" id="entity_cadastrar mais endereco"><ellipse cx="2011.9397" cy="30.9519" fill="#FFFFFF" rx="99.3097" ry="22.2619" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174.5352" x="1924.6721" y="35.6004">cadastrar mais endereco</text></g><g class="entity" data-entity="pesquisar produtos" data-source-line="28" data-uid="ent0013" id="entity_pesquisar produtos"><ellipse cx="1795.9438" cy="30.9548" fill="#FFFFFF" rx="81.7738" ry="18.7548" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.8389" x="1728.5243" y="35.6032">pesquisar produtos</text></g><g class="entity" data-entity="adiciona produto" data-source-line="29" data-uid="ent0014" id="entity_adiciona produto"><ellipse cx="1603.9383" cy="30.9457" fill="#FFFFFF" rx="74.8783" ry="17.3757" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.4326" x="1544.722" y="35.5941">adiciona produto</text></g><g class="entity" data-entity="remover produto" data-source-line="30" data-uid="ent0015" id="entity_remover produto"><ellipse cx="1418.9382" cy="30.9476" fill="#FFFFFF" rx="74.9882" ry="17.3976" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6992" x="1359.5886" y="35.5961">remover produto</text></g><g class="entity" data-entity="rapido" data-source-line="31" data-uid="ent0016" id="entity_rapido"><ellipse cx="2058.9411" cy="569.9436" fill="#FFFFFF" rx="34.5111" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.5635" x="2036.6594" y="574.5921">rapido</text></g><g class="entity" data-entity="grande" data-source-line="32" data-uid="ent0017" id="entity_grande"><ellipse cx="1950.9388" cy="569.9436" fill="#FFFFFF" rx="38.0688" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.5947" x="1926.1414" y="574.5921">grande</text></g><g class="entity" data-entity="rastrear pedidos" data-source-line="33" data-uid="ent0018" id="entity_rastrear pedidos"><ellipse cx="799.9415" cy="30.9483" fill="#FFFFFF" rx="73.5915" ry="17.1183" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.2949" x="742.294" y="35.5967">rastrear pedidos</text></g><g class="entity" data-entity="calcular tempo de entrega" data-source-line="34" data-uid="ent0019" id="entity_calcular tempo de entrega"><ellipse cx="586.9379" cy="30.9496" fill="#FFFFFF" rx="104.4479" ry="23.2896" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185.8145" x="494.0307" y="35.598">calcular tempo de entrega</text></g><g class="entity" data-entity="exibir status do pedido" data-source-line="35" data-uid="ent0020" id="entity_exibir status do pedido"><ellipse cx="353.945" cy="30.953" fill="#FFFFFF" rx="93.165" ry="21.033" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160.8701" x="273.5099" y="35.6014">exibir status do pedido</text></g><g class="entity" data-entity="exibe restaurantes favoritos" data-source-line="36" data-uid="ent0021" id="entity_exibe restaurantes favoritos"><ellipse cx="115.9401" cy="30.948" fill="#FFFFFF" rx="109.9401" ry="24.388" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197.75" x="17.0651" y="35.5965">exibe restaurantes favoritos</text></g><g class="entity" data-entity="processar pagamento" data-source-line="37" data-uid="ent0022" id="entity_processar pagamento"><ellipse cx="195.9437" cy="448.0847" fill="#FFFFFF" rx="89.6737" ry="20.3347" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.002" x="119.4427" y="452.7332">processar pagamento</text></g><g class="entity" data-entity="exibir frete" data-source-line="38" data-uid="ent0023" id="entity_exibir frete"><ellipse cx="377.9381" cy="448.0836" fill="#FFFFFF" rx="57.5681" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.1709" x="339.3526" y="452.7321">exibir frete</text></g><g class="entity" data-entity="exibir tipos de entrega" data-source-line="39" data-uid="ent0024" id="entity_exibir tipos de entrega"><ellipse cx="562.9392" cy="448.0758" fill="#FFFFFF" rx="92.3792" ry="20.8758" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.1064" x="483.386" y="452.7243">exibir tipos de entrega</text></g><g class="entity" data-entity="cancela pedido" data-source-line="40" data-uid="ent0025" id="entity_cancela pedido"><ellipse cx="1238.9426" cy="30.9485" fill="#FFFFFF" rx="69.8926" ry="16.3785" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106.1074" x="1185.8889" y="35.597">cancela pedido</text></g><g class="entity" data-entity="adiciona restaurante favorito" data-source-line="41" data-uid="ent0026" id="entity_adiciona restaurante favorito"><ellipse cx="1020.9388" cy="30.9518" fill="#FFFFFF" rx="112.7588" ry="24.9518" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="203.834" x="919.0218" y="35.6002">adiciona restaurante favorito</text></g><g class="entity" data-entity="remove restaurante favorito" data-source-line="42" data-uid="ent0027" id="entity_remove restaurante favorito"><ellipse cx="1503.9351" cy="448.083" fill="#FFFFFF" rx="110.2151" ry="24.443" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198.3447" x="1404.7628" y="452.7315">remove restaurante favorito</text></g><g class="entity" data-entity="realizar pagamento" data-source-line="43" data-uid="ent0028" id="entity_realizar pagamento"><ellipse cx="1731.9384" cy="448.0777" fill="#FFFFFF" rx="82.6884" ry="18.9377" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136.9717" x="1663.4525" y="452.7261">realizar pagamento</text></g><g class="entity" data-entity="PIX" data-source-line="44" data-uid="ent0029" id="entity_PIX"><ellipse cx="1853.941" cy="569.9436" fill="#FFFFFF" rx="18.671" ry="14.5236" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22.1621" x="1842.8599" y="574.5921">PIX</text></g><g class="entity" data-entity="Cartão de débito" data-source-line="45" data-uid="ent0030" id="entity_Cartão de débito"><ellipse cx="1537.9446" cy="569.9369" fill="#FFFFFF" rx="74.4846" ry="17.2969" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.4756" x="1479.2068" y="574.5854">Cartão de débito</text></g><g class="entity" data-entity="Cartão de crédito" data-source-line="46" data-uid="ent0031" id="entity_Cartão de crédito"><ellipse cx="1723.9423" cy="569.9445" fill="#FFFFFF" rx="76.3723" ry="17.6745" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.042" x="1662.9213" y="574.5929">Cartão de crédito</text></g><g class="entity" data-entity="seleciona tipo de entrega" data-source-line="47" data-uid="ent0032" id="entity_seleciona tipo de entrega"><ellipse cx="1950.9427" cy="448.0825" fill="#FFFFFF" rx="101.1127" ry="22.6225" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178.5068" x="1861.6893" y="452.731">seleciona tipo de entrega</text></g><g class="entity" data-entity="notificar atrasos" data-source-line="48" data-uid="ent0033" id="entity_notificar atrasos"><ellipse cx="762.9415" cy="448.0763" fill="#FFFFFF" rx="72.9315" ry="16.9863" style="stroke:#000000;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.6748" x="706.1041" y="452.7247">notificar atrasos</text></g><g class="link" data-entity-1="A" data-entity-2="cadastro de usuario" data-source-line="51" data-uid="lnk34" id="link_A_cadastro de usuario"><path d="M1628.67,228.04 C1717.55,263.94 2015.7968,384.4125 2125.4768,428.7225" fill="none" id="A-to-cadastro de usuario" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2131.04,430.97,2124.1936,423.89,2126.404,429.0971,2121.1969,431.3076,2131.04,430.97" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="login de cadastro" data-entity-2="A" data-source-line="53" data-uid="lnk36" id="link_login de cadastro_A"><path d="M1449.32,217.05 C1494.6,217.05 1533.88,217.05 1579.16,217.05" fill="none" id="login de cadastro-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1443.32,217.05,1452.32,221.05,1448.32,217.05,1452.32,213.05,1443.32,217.05" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="e-mail e senha" data-entity-2="login de cadastro" data-source-line="54" data-uid="lnk38" id="link_e-mail e senha_login de cadastro"><path d="M1199.96,217.05 C1230.14,217.05 1259.64,217.05 1290.6,217.05" fill="none" id="e-mail e senha-backto-login de cadastro" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1193.96,217.05,1202.96,221.05,1198.96,217.05,1202.96,213.05,1193.96,217.05" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1211.81" y="210.1169">«extend»</text></g><g class="link" data-entity-1="login de cadastro" data-entity-2="conta google" data-source-line="55" data-uid="lnk39" id="link_login de cadastro_conta google"><path d="M1363.49,235.1 C1358.32,260.6 1349.8595,302.3691 1345.0395,326.1991" fill="none" id="login de cadastro-to-conta google" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1343.85,332.08,1349.5549,324.0516,1344.8413,327.1792,1341.7137,322.4656,1343.85,332.08" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1353.94" y="298.2669">«extend»</text></g><g class="link" data-entity-1="A" data-entity-2="realizar pedidos" data-source-line="57" data-uid="lnk40" id="link_A_realizar pedidos"><path d="M1578.9,239.62 C1544.63,268.78 1480.76,321.81 1422.94,362.64 C1386.05,388.69 1346.3719,412.6654 1318.5319,428.9154" fill="none" id="A-to-realizar pedidos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1313.35,431.94,1323.1392,430.8577,1317.6682,429.4195,1319.1064,423.9485,1313.35,431.94" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="realizar pedidos" data-entity-2="sem endereco" data-source-line="58" data-uid="lnk41" id="link_realizar pedidos_sem endereco"><path d="M1291.93,465.25 C1299.11,488.5 1310.4905,525.3669 1317.4905,548.0469" fill="none" id="realizar pedidos-to-sem endereco" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1319.26,553.78,1320.4279,544.0006,1317.7854,549.0024,1312.7837,546.3599,1319.26,553.78" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1308.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pedidos" data-entity-2="pedir ate 2 enderecos" data-source-line="59" data-uid="lnk42" id="link_realizar pedidos_pedir ate 2 enderecos"><path d="M1266.99,464.51 C1238.7,486.38 1191.7164,522.7096 1161.1464,546.3496" fill="none" id="realizar pedidos-to-pedir ate 2 enderecos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1156.4,550.02,1165.9665,547.6786,1160.3553,546.9613,1161.0726,541.3501,1156.4,550.02" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1215.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="editar dados pessoais" data-entity-2="A" data-source-line="61" data-uid="lnk44" id="link_editar dados pessoais_A"><path d="M2176.5694,49.2478 C2046.1694,87.2278 1722.07,181.64 1628.83,208.8" fill="none" id="editar dados pessoais-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2182.33,47.57,2172.5705,46.2463,2177.5295,48.9682,2174.8076,53.9272,2182.33,47.57" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="cadastrar mais endereco" data-entity-2="A" data-source-line="63" data-uid="lnk46" id="link_cadastrar mais endereco_A"><path d="M1963.5811,53.7681 C1878.4711,92.1781 1696.1,174.46 1628.66,204.9" fill="none" id="cadastrar mais endereco-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1969.05,51.3,1959.2013,51.3562,1964.4926,53.3567,1962.4921,58.648,1969.05,51.3" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="pesquisar produtos" data-entity-2="A" data-source-line="65" data-uid="lnk48" id="link_pesquisar produtos_A"><path d="M1773.1995,53.7529 C1738.5695,86.9629 1668.02,154.61 1628.89,192.12" fill="none" id="pesquisar produtos-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1777.53,49.6,1768.2656,52.9424,1773.9213,53.0608,1773.8029,58.7164,1777.53,49.6" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="adiciona produto" data-entity-2="A" data-source-line="67" data-uid="lnk50" id="link_adiciona produto_A"><path d="M1603.94,54.61 C1603.94,83.82 1603.94,138.94 1603.94,178.69" fill="none" id="adiciona produto-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1603.94,48.61,1599.94,57.61,1603.94,53.61,1607.94,57.61,1603.94,48.61" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="remover produto" data-entity-2="A" data-source-line="69" data-uid="lnk52" id="link_remover produto_A"><path d="M1439.6131,52.5222 C1472.1531,84.9022 1540.75,153.17 1579.16,191.39" fill="none" id="remover produto-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1435.36,48.29,1438.9182,57.4736,1438.9042,51.8168,1444.5611,51.8029,1435.36,48.29" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="cancela pedido" data-entity-2="A" data-source-line="71" data-uid="lnk54" id="link_cancela pedido_A"><path d="M1272.6369,48.9424 C1341.9769,83.9224 1513.94,170.66 1579.28,203.61" fill="none" id="cancela pedido-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1267.28,46.24,1273.5138,53.8649,1271.7441,48.492,1277.117,46.7223,1267.28,46.24" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="adiciona restaurante favorito" data-entity-2="A" data-source-line="73" data-uid="lnk56" id="link_adiciona restaurante favorito_A"><path d="M1090.1614,53.8071 C1217.5014,94.0271 1493.47,181.17 1578.9,208.14" fill="none" id="adiciona restaurante favorito-backto-A" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1084.44,52,1091.8174,58.5249,1089.2078,53.5059,1094.2268,50.8964,1084.44,52" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="A" data-entity-2="remove restaurante favorito" data-source-line="75" data-uid="lnk57" id="link_A_remove restaurante favorito"><path d="M1587.54,255.61 C1566.76,303.2 1533.9706,378.2912 1516.6306,418.0112" fill="none" id="A-to-remove restaurante favorito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1514.23,423.51,1521.4967,416.8621,1516.2305,418.9276,1514.1649,413.6614,1514.23,423.51" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="A" data-entity-2="realizar pagamento" data-source-line="77" data-uid="lnk58" id="link_A_realizar pagamento"><path d="M1624.93,255.61 C1652.81,305.49 1698.0132,386.3723 1718.8732,423.7023" fill="none" id="A-to-realizar pagamento" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1721.8,428.94,1720.9016,419.1322,1719.361,424.5752,1713.9179,423.0347,1721.8,428.94" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="Cartão de crédito" data-source-line="78" data-uid="lnk59" id="link_realizar pagamento_Cartão de crédito"><path d="M1730.73,467.29 C1729.19,490.34 1726.9614,523.7534 1725.4614,546.1234" fill="none" id="realizar pagamento-to-Cartão de crédito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1725.06,552.11,1729.6532,543.3978,1725.3945,547.1212,1721.6711,542.8625,1725.06,552.11" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1728.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="PIX" data-source-line="79" data-uid="lnk60" id="link_realizar pagamento_PIX"><path d="M1756.19,466.51 C1769.38,476.45 1785.67,489.49 1798.94,502.52 C1816.78,520.04 1831.1556,538.1658 1841.4956,551.9858" fill="none" id="realizar pagamento-to-PIX" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1845.09,556.79,1842.9011,547.1875,1842.0946,552.7865,1836.4956,551.98,1845.09,556.79" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1813.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="realizar pagamento" data-entity-2="Cartão de débito" data-source-line="80" data-uid="lnk61" id="link_realizar pagamento_Cartão de débito"><path d="M1704.14,466.25 C1666.43,489.56 1604.684,527.6958 1568.324,550.1658" fill="none" id="realizar pagamento-to-Cartão de débito" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1563.22,553.32,1572.9788,551.9914,1567.4733,550.6915,1568.7732,545.186,1563.22,553.32" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1640.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="A" data-entity-2="seleciona tipo de entrega" data-source-line="83" data-uid="lnk62" id="link_A_seleciona tipo de entrega"><path d="M1628.9,234.52 C1690.74,275.34 1846.0325,377.8347 1914.3425,422.9247" fill="none" id="A-to-seleciona tipo de entrega" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1919.35,426.23,1914.0423,417.9337,1915.1771,423.4756,1909.6352,424.6103,1919.35,426.23" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="seleciona tipo de entrega" data-entity-2="rapido" data-source-line="84" data-uid="lnk63" id="link_seleciona tipo de entrega_rapido"><path d="M1982.97,469.95 C1995.42,479.02 2009.23,490.35 2019.94,502.52 C2034.25,518.79 2043.4797,535.6432 2050.2297,549.8132" fill="none" id="seleciona tipo de entrega-to-rapido" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="2052.81,555.23,2052.5507,545.3846,2050.6597,550.716,2045.3283,548.825,2052.81,555.23" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="2032.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="seleciona tipo de entrega" data-entity-2="grande" data-source-line="85" data-uid="lnk64" id="link_seleciona tipo de entrega_grande"><path d="M1950.94,471.07 C1950.94,495.53 1950.94,528.33 1950.94,548.96" fill="none" id="seleciona tipo de entrega-to-grande" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="1950.94,554.96,1954.94,545.96,1950.94,549.96,1946.94,545.96,1950.94,554.96" style="stroke:#000000;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61.1851" x="1951.94" y="515.5869">«extend»</text></g><g class="link" data-entity-1="rastrear pedidos" data-entity-2="S" data-source-line="87" data-uid="lnk66" id="link_rastrear pedidos_S"><path d="M767.4104,50.0935 C705.6504,84.5535 560.87,165.32 498.19,200.29" fill="none" id="rastrear pedidos-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="772.65,47.17,762.8416,48.0622,768.2837,49.6063,766.7396,55.0483,772.65,47.17" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="calcular tempo de entrega" data-entity-2="S" data-source-line="88" data-uid="lnk68" id="link_calcular tempo de entrega_S"><path d="M569.6115,59.2237 C550.0415,90.0137 517.61,141.05 493.85,178.44" fill="none" id="calcular tempo de entrega-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="572.83,54.16,564.6265,59.6099,570.1479,58.3798,571.3781,63.9013,572.83,54.16" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="exibir status do pedido" data-entity-2="S" data-source-line="89" data-uid="lnk70" id="link_exibir status do pedido_S"><path d="M369.7779,57.0768 C388.8579,87.3668 422.16,140.23 446.28,178.51" fill="none" id="exibir status do pedido-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="366.58,52,367.9924,61.7471,369.2449,56.2306,374.7614,57.4832,366.58,52" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="exibe restaurantes favoritos" data-entity-2="S" data-source-line="90" data-uid="lnk72" id="link_exibe restaurantes favoritos_S"><path d="M163.2631,56.5585 C236.1531,94.4685 378.93,168.72 441.27,201.14" fill="none" id="exibe restaurantes favoritos-backto-S" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="157.94,53.79,164.0789,61.4915,162.3759,56.0971,167.7703,54.3941,157.94,53.79" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="processar pagamento" data-source-line="91" data-uid="lnk73" id="link_S_processar pagamento"><path d="M441.39,241.91 C386.7,287.63 272.7936,382.8421 223.1436,424.3421" fill="none" id="S-to-processar pagamento" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="218.54,428.19,228.0107,425.4872,222.3764,424.9834,222.8801,419.349,218.54,428.19" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="exibir frete" data-source-line="92" data-uid="lnk74" id="link_S_exibir frete"><path d="M454.85,255.61 C433.95,307.65 399.4359,393.5522 385.6259,427.9422" fill="none" id="S-to-exibir frete" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="383.39,433.51,390.4557,426.6488,385.2532,428.8701,383.0319,423.6677,383.39,433.51" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="notificar atrasos" data-source-line="93" data-uid="lnk75" id="link_S_notificar atrasos"><path d="M498.57,240.43 C557.75,286.69 687.543,388.1446 738.313,427.8346" fill="none" id="S-to-notificar atrasos" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="743.04,431.53,738.4131,422.8356,739.1009,428.4505,733.486,429.1383,743.04,431.53" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="S" data-entity-2="exibir tipos de entrega" data-source-line="94" data-uid="lnk76" id="link_S_exibir tipos de entrega"><path d="M485.19,255.61 C505.08,304.6 536.9117,382.9912 552.4917,421.3412" fill="none" id="S-to-exibir tipos de entrega" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="554.75,426.9,555.0684,417.0563,552.8681,422.2677,547.6567,420.0674,554.75,426.9" style="stroke:#000000;stroke-width:1;"/></g></g></svg></div></div>
+
+<h2 id="referencias">Referências</h2>
+<blockquote>
+<p>UML Class and Object Diagrams Overview. Disponível em https://www.uml-diagrams.org/class-diagrams-overview.html. Acesso em 21/09/20</p>
+<p>UML Class Diagram Tutorial. Disponível em https://www.youtube.com/watch?v=UI6lqHOVHic. Acesso em 21/09/20</p>
+<p>UML Class Relationship Diagrams. Disponível em https://www.cs.odu.edu/~zeil/cs330/latest/Public/classDiagrams/index.html#other-class-diagram-elements Acesso em 19/10/20</p>
+</blockquote>
+<h2 id="autores">Autor(es)</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08/04/25</td>
+<td>1.0</td>
+<td>Criação do documento</td>
+<td>João Pedro, Pedro Silvestre</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>

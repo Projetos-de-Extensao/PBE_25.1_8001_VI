@@ -1,0 +1,1294 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../diagrama_de_casos_de_uso/">
+      
+      
+        <link rel="next" href="../../../___Constru%C3%A7%C3%A3o/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Diagrama de Classes - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nao-precisa-entregar-para-a-ap1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Diagrama de Classes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     Iniciação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+             Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iniciação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/5w2h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5W2H
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/Brainstorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brainstorm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/documento_de_visao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/entrevista/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entrevista
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/mapa_mental/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapas Mentais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/metodologia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metodologia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/pesquisa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pesquisa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/prototipo_alta_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_Inicia%C3%A7%C3%A3o/prototipo_baixa_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+      Elaboração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+              Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elaboração
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Arquitetura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Diagramas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Diagramas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrama_de_casos_de_uso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Casos de uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+       Construção
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+               Construção
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../___Constru%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Construção
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+        Transição
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+                Transição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../____Transi%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+         Iteração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+                 Iteração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_____Itera%C3%A7%C3%A3o/interacao7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Util
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Util
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../util/doc_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Titulo do documento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="nao-precisa-entregar-para-a-ap1">Não precisa entregar para a AP1</h1>
+<h2 id="introducao">Introdução</h2>
+<p align = "justify">
+O diagrama de classes UML é um diagrama que mostra a estrutura do sistema desenhado no nível de classes e interfaces, ilustra as funcionalidades, dependências e relacionamentos de cada elemento. Pode ser vista como uma representação visual da arquitetura de um sistema.
+</p>
+
+<h2 id="metodologia">Metodologia</h2>
+<p align = "justify">
+A equipe se reuniu por .... e realizou um brainstorm onde foram dicutidos os tópicos chaves e a arquitetura geral dos sistemas, e assim criamos...
+
+Para a criação da primeira versão do diagrama de classes, a equipe utilizou o programa... Além disso, foi utilizado... para videoconferência e Visual Studio Code / Live Share para elaboração da documentação.
+</p>
+
+<h1 id="entregue-no-proximo-incremento">ENTREGUE NO PRÓXIMO INCREMENTO</h1>
+<h2 id="diagrama-de-classes">Diagrama de Classes</h2>
+<h3 id="versao-10">Versão 1.0</h3>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="315px" preserveAspectRatio="xMidYMid meet" style="width:372px;height:315px;background:#FFFFFF;" version="1.1" viewBox="0 0 372 315" width="372px" zoomAndPan="magnify" class="diagram"><title>Diagrama de classes</title><defs/><g><g class="title" data-source-line="3"><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="162.5791" x="98.0913" y="22.9951">Diagrama de classes</text></g><g class="entity" data-entity="Pedido" data-source-line="5" data-uid="ent0002" id="entity_Pedido"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79.2842" x="160.3" y="152.2969"/><ellipse cx="175.3" cy="168.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M178.2688,173.9375 Q177.6906,174.2344 177.05,174.375 Q176.4094,174.5313 175.7063,174.5313 Q173.2063,174.5313 171.8781,172.8906 Q170.5656,171.2344 170.5656,168.1094 Q170.5656,164.9844 171.8781,163.3281 Q173.2063,161.6719 175.7063,161.6719 Q176.4094,161.6719 177.05,161.8281 Q177.7063,161.9844 178.2688,162.2813 L178.2688,165 Q177.6438,164.4219 177.05,164.1563 Q176.4563,163.875 175.8313,163.875 Q174.4875,163.875 173.8,164.9531 Q173.1125,166.0156 173.1125,168.1094 Q173.1125,170.2031 173.8,171.2813 Q174.4875,172.3438 175.8313,172.3438 Q176.4563,172.3438 177.05,172.0781 Q177.6438,171.7969 178.2688,171.2188 L178.2688,173.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.2842" x="189.3" y="173.1436">Pedido</text><line style="stroke:#181818;stroke-width:0.5;" x1="161.3" x2="238.5842" y1="184.2969" y2="184.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="161.3" x2="238.5842" y1="192.2969" y2="192.2969"/></g><g class="entity" data-entity="Cliente" data-source-line="6" data-uid="ent0003" id="entity_Cliente"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="81.1436" x="275.37" y="152.2969"/><ellipse cx="290.37" cy="168.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M293.3388,173.9375 Q292.7606,174.2344 292.12,174.375 Q291.4794,174.5313 290.7763,174.5313 Q288.2763,174.5313 286.9481,172.8906 Q285.6356,171.2344 285.6356,168.1094 Q285.6356,164.9844 286.9481,163.3281 Q288.2763,161.6719 290.7763,161.6719 Q291.4794,161.6719 292.12,161.8281 Q292.7763,161.9844 293.3388,162.2813 L293.3388,165 Q292.7138,164.4219 292.12,164.1563 Q291.5263,163.875 290.9013,163.875 Q289.5575,163.875 288.87,164.9531 Q288.1825,166.0156 288.1825,168.1094 Q288.1825,170.2031 288.87,171.2813 Q289.5575,172.3438 290.9013,172.3438 Q291.5263,172.3438 292.12,172.0781 Q292.7138,171.7969 293.3388,171.2188 L293.3388,173.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.1436" x="304.37" y="173.1436">Cliente</text><line style="stroke:#181818;stroke-width:0.5;" x1="276.37" x2="355.5136" y1="184.2969" y2="184.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="276.37" x2="355.5136" y1="192.2969" y2="192.2969"/></g><g class="entity" data-entity="Motorista" data-source-line="7" data-uid="ent0004" id="entity_Motorista"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97.707" x="221.09" y="44.2969"/><ellipse cx="236.09" cy="60.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M239.0588,65.9375 Q238.4806,66.2344 237.84,66.375 Q237.1994,66.5313 236.4963,66.5313 Q233.9963,66.5313 232.6681,64.8906 Q231.3556,63.2344 231.3556,60.1094 Q231.3556,56.9844 232.6681,55.3281 Q233.9963,53.6719 236.4963,53.6719 Q237.1994,53.6719 237.84,53.8281 Q238.4963,53.9844 239.0588,54.2813 L239.0588,57 Q238.4338,56.4219 237.84,56.1563 Q237.2463,55.875 236.6213,55.875 Q235.2775,55.875 234.59,56.9531 Q233.9025,58.0156 233.9025,60.1094 Q233.9025,62.2031 234.59,63.2813 Q235.2775,64.3438 236.6213,64.3438 Q237.2463,64.3438 237.84,64.0781 Q238.4338,63.7969 239.0588,63.2188 L239.0588,65.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.707" x="250.09" y="65.1436">Motorista</text><line style="stroke:#181818;stroke-width:0.5;" x1="222.09" x2="317.797" y1="76.2969" y2="76.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="222.09" x2="317.797" y1="84.2969" y2="84.2969"/></g><g class="entity" data-entity="Item" data-source-line="8" data-uid="ent0005" id="entity_Item"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63.8691" x="167.01" y="260.2969"/><ellipse cx="182.01" cy="276.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M184.9788,281.9375 Q184.4006,282.2344 183.76,282.375 Q183.1194,282.5313 182.4163,282.5313 Q179.9163,282.5313 178.5881,280.8906 Q177.2756,279.2344 177.2756,276.1094 Q177.2756,272.9844 178.5881,271.3281 Q179.9163,269.6719 182.4163,269.6719 Q183.1194,269.6719 183.76,269.8281 Q184.4163,269.9844 184.9788,270.2813 L184.9788,273 Q184.3538,272.4219 183.76,272.1563 Q183.1663,271.875 182.5413,271.875 Q181.1975,271.875 180.51,272.9531 Q179.8225,274.0156 179.8225,276.1094 Q179.8225,278.2031 180.51,279.2813 Q181.1975,280.3438 182.5413,280.3438 Q183.1663,280.3438 183.76,280.0781 Q184.3538,279.7969 184.9788,279.2188 L184.9788,281.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.8691" x="196.01" y="281.1436">Item</text><line style="stroke:#181818;stroke-width:0.5;" x1="168.01" x2="229.8791" y1="292.2969" y2="292.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="168.01" x2="229.8791" y1="300.2969" y2="300.2969"/></g><g class="entity" data-entity="Pagamento" data-source-line="9" data-uid="ent0006" id="entity_Pagamento"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111.666" x="74.11" y="44.2969"/><ellipse cx="89.11" cy="60.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M92.0788,65.9375 Q91.5006,66.2344 90.86,66.375 Q90.2194,66.5313 89.5163,66.5313 Q87.0163,66.5313 85.6881,64.8906 Q84.3756,63.2344 84.3756,60.1094 Q84.3756,56.9844 85.6881,55.3281 Q87.0163,53.6719 89.5163,53.6719 Q90.2194,53.6719 90.86,53.8281 Q91.5163,53.9844 92.0788,54.2813 L92.0788,57 Q91.4538,56.4219 90.86,56.1563 Q90.2663,55.875 89.6413,55.875 Q88.2975,55.875 87.61,56.9531 Q86.9225,58.0156 86.9225,60.1094 Q86.9225,62.2031 87.61,63.2813 Q88.2975,64.3438 89.6413,64.3438 Q90.2663,64.3438 90.86,64.0781 Q91.4538,63.7969 92.0788,63.2188 L92.0788,65.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.666" x="103.11" y="65.1436">Pagamento</text><line style="stroke:#181818;stroke-width:0.5;" x1="75.11" x2="184.776" y1="76.2969" y2="76.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="75.11" x2="184.776" y1="84.2969" y2="84.2969"/></g><g class="entity" data-entity="Avaliação" data-source-line="10" data-uid="ent0007" id="entity_Avaliação"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99.6416" x="266.12" y="260.2969"/><ellipse cx="281.12" cy="276.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M284.0888,281.9375 Q283.5106,282.2344 282.87,282.375 Q282.2294,282.5313 281.5263,282.5313 Q279.0263,282.5313 277.6981,280.8906 Q276.3856,279.2344 276.3856,276.1094 Q276.3856,272.9844 277.6981,271.3281 Q279.0263,269.6719 281.5263,269.6719 Q282.2294,269.6719 282.87,269.8281 Q283.5263,269.9844 284.0888,270.2813 L284.0888,273 Q283.4638,272.4219 282.87,272.1563 Q282.2763,271.875 281.6513,271.875 Q280.3075,271.875 279.62,272.9531 Q278.9325,274.0156 278.9325,276.1094 Q278.9325,278.2031 279.62,279.2813 Q280.3075,280.3438 281.6513,280.3438 Q282.2763,280.3438 282.87,280.0781 Q283.4638,279.7969 284.0888,279.2188 L284.0888,281.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6416" x="295.12" y="281.1436">Avaliação</text><line style="stroke:#181818;stroke-width:0.5;" x1="267.12" x2="364.7616" y1="292.2969" y2="292.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="267.12" x2="364.7616" y1="300.2969" y2="300.2969"/></g><g class="entity" data-entity="Restaurante" data-source-line="11" data-uid="ent0008" id="entity_Restaurante"><rect fill="#F1F1F1" height="48" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117.8867" x="7" y="152.2969"/><ellipse cx="22" cy="168.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M24.9688,173.9375 Q24.3906,174.2344 23.75,174.375 Q23.1094,174.5313 22.4063,174.5313 Q19.9063,174.5313 18.5781,172.8906 Q17.2656,171.2344 17.2656,168.1094 Q17.2656,164.9844 18.5781,163.3281 Q19.9063,161.6719 22.4063,161.6719 Q23.1094,161.6719 23.75,161.8281 Q24.4063,161.9844 24.9688,162.2813 L24.9688,165 Q24.3438,164.4219 23.75,164.1563 Q23.1563,163.875 22.5313,163.875 Q21.1875,163.875 20.5,164.9531 Q19.8125,166.0156 19.8125,168.1094 Q19.8125,170.2031 20.5,171.2813 Q21.1875,172.3438 22.5313,172.3438 Q23.1563,172.3438 23.75,172.0781 Q24.3438,171.7969 24.9688,171.2188 L24.9688,173.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.8867" x="36" y="173.1436">Restaurante</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="123.8867" y1="184.2969" y2="184.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="123.8867" y1="192.2969" y2="192.2969"/></g><g class="link" data-entity-1="Cliente" data-entity-2="Avaliação" data-source-line="13" data-uid="lnk9" id="link_Cliente_Avaliação"><path codeLine="13" d="M315.94,218.5569 C315.94,236.2369 315.94,242.4269 315.94,260.0869" fill="none" id="Cliente-backto-Avaliação" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="315.94,200.5569,309.94,218.5569,321.94,218.5569,315.94,200.5569" style="stroke:#181818;stroke-width:1;"/></g><g class="link" data-entity-1="Pedido" data-entity-2="Cliente" data-source-line="14" data-uid="lnk11" id="link_Pedido_Cliente"><path codeLine="14" d="M239.82,176.2969 C251.51,176.2969 245.21,176.2969 256.91,176.2969" fill="none" id="Pedido-to-Cliente" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="274.91,176.2969,256.91,170.2969,256.91,182.2969,274.91,176.2969" style="stroke:#181818;stroke-width:1;"/></g><g class="link" data-entity-1="Pedido" data-entity-2="Item" data-source-line="15" data-uid="lnk12" id="link_Pedido_Item"><path codeLine="15" d="M199.5571,218.5561 C199.3971,236.2361 199.33,242.4269 199.16,260.0869" fill="none" id="Pedido-backto-Item" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="199.72,200.5569,193.5574,218.5018,205.5569,218.6104,199.72,200.5569" style="stroke:#181818;stroke-width:1;"/></g><g class="link" data-entity-1="Pagamento" data-entity-2="Pedido" data-source-line="17" data-uid="lnk14" id="link_Pagamento_Pedido"><path codeLine="17" d="M145.31,92.5569 C156.98,110.2369 163.0422,119.4056 174.7022,137.0656" fill="none" id="Pagamento-to-Pedido" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="184.62,152.0869,179.7093,133.7597,169.6952,140.3715,184.62,152.0869" style="stroke:#181818;stroke-width:1;"/></g><g class="link" data-entity-1="Motorista" data-entity-2="Pedido" data-source-line="18" data-uid="lnk15" id="link_Motorista_Pedido"><path codeLine="18" d="M244.6641,107.5794 C232.9941,125.2594 226.93,134.4269 215.27,152.0869" fill="none" id="Motorista-backto-Pedido" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="254.58,92.5569,239.6566,104.2741,249.6716,110.8847,254.58,92.5569" style="stroke:#181818;stroke-width:1;"/></g><g class="link" data-entity-1="Restaurante" data-entity-2="Pedido" data-source-line="19" data-uid="lnk16" id="link_Restaurante_Pedido"><path codeLine="19" d="M143.35,176.2969 C154.91,176.2969 148.47,176.2969 160.03,176.2969" fill="none" id="Restaurante-backto-Pedido" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="125.35,176.2969,143.35,182.2969,143.35,170.2969,125.35,176.2969" style="stroke:#181818;stroke-width:1;"/></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="315px" preserveAspectRatio="xMidYMid meet" style="width:372px;height:315px;background:#1B1B1B;" version="1.1" viewBox="0 0 372 315" width="372px" zoomAndPan="magnify" class="diagram"><title>Diagrama de classes</title><defs/><g><rect fill="#1B1B1B" height="315" style="stroke:none;stroke-width:1;" width="372" x="0" y="0"/><g class="title" data-source-line="3"><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="162.5791" x="98.0913" y="22.9951">Diagrama de classes</text></g><g class="entity" data-entity="Pedido" data-source-line="5" data-uid="ent0002" id="entity_Pedido"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="79.2842" x="160.3" y="152.2969"/><ellipse cx="175.3" cy="168.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M178.2688,173.9375 Q177.6906,174.2344 177.05,174.375 Q176.4094,174.5313 175.7063,174.5313 Q173.2063,174.5313 171.8781,172.8906 Q170.5656,171.2344 170.5656,168.1094 Q170.5656,164.9844 171.8781,163.3281 Q173.2063,161.6719 175.7063,161.6719 Q176.4094,161.6719 177.05,161.8281 Q177.7063,161.9844 178.2688,162.2813 L178.2688,165 Q177.6438,164.4219 177.05,164.1563 Q176.4563,163.875 175.8313,163.875 Q174.4875,163.875 173.8,164.9531 Q173.1125,166.0156 173.1125,168.1094 Q173.1125,170.2031 173.8,171.2813 Q174.4875,172.3438 175.8313,172.3438 Q176.4563,172.3438 177.05,172.0781 Q177.6438,171.7969 178.2688,171.2188 L178.2688,173.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.2842" x="189.3" y="173.1436">Pedido</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="161.3" x2="238.5842" y1="184.2969" y2="184.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="161.3" x2="238.5842" y1="192.2969" y2="192.2969"/></g><g class="entity" data-entity="Cliente" data-source-line="6" data-uid="ent0003" id="entity_Cliente"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="81.1436" x="275.37" y="152.2969"/><ellipse cx="290.37" cy="168.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M293.3388,173.9375 Q292.7606,174.2344 292.12,174.375 Q291.4794,174.5313 290.7763,174.5313 Q288.2763,174.5313 286.9481,172.8906 Q285.6356,171.2344 285.6356,168.1094 Q285.6356,164.9844 286.9481,163.3281 Q288.2763,161.6719 290.7763,161.6719 Q291.4794,161.6719 292.12,161.8281 Q292.7763,161.9844 293.3388,162.2813 L293.3388,165 Q292.7138,164.4219 292.12,164.1563 Q291.5263,163.875 290.9013,163.875 Q289.5575,163.875 288.87,164.9531 Q288.1825,166.0156 288.1825,168.1094 Q288.1825,170.2031 288.87,171.2813 Q289.5575,172.3438 290.9013,172.3438 Q291.5263,172.3438 292.12,172.0781 Q292.7138,171.7969 293.3388,171.2188 L293.3388,173.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.1436" x="304.37" y="173.1436">Cliente</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="276.37" x2="355.5136" y1="184.2969" y2="184.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="276.37" x2="355.5136" y1="192.2969" y2="192.2969"/></g><g class="entity" data-entity="Motorista" data-source-line="7" data-uid="ent0004" id="entity_Motorista"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="97.707" x="221.09" y="44.2969"/><ellipse cx="236.09" cy="60.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M239.0588,65.9375 Q238.4806,66.2344 237.84,66.375 Q237.1994,66.5313 236.4963,66.5313 Q233.9963,66.5313 232.6681,64.8906 Q231.3556,63.2344 231.3556,60.1094 Q231.3556,56.9844 232.6681,55.3281 Q233.9963,53.6719 236.4963,53.6719 Q237.1994,53.6719 237.84,53.8281 Q238.4963,53.9844 239.0588,54.2813 L239.0588,57 Q238.4338,56.4219 237.84,56.1563 Q237.2463,55.875 236.6213,55.875 Q235.2775,55.875 234.59,56.9531 Q233.9025,58.0156 233.9025,60.1094 Q233.9025,62.2031 234.59,63.2813 Q235.2775,64.3438 236.6213,64.3438 Q237.2463,64.3438 237.84,64.0781 Q238.4338,63.7969 239.0588,63.2188 L239.0588,65.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.707" x="250.09" y="65.1436">Motorista</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="222.09" x2="317.797" y1="76.2969" y2="76.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="222.09" x2="317.797" y1="84.2969" y2="84.2969"/></g><g class="entity" data-entity="Item" data-source-line="8" data-uid="ent0005" id="entity_Item"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="63.8691" x="167.01" y="260.2969"/><ellipse cx="182.01" cy="276.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M184.9788,281.9375 Q184.4006,282.2344 183.76,282.375 Q183.1194,282.5313 182.4163,282.5313 Q179.9163,282.5313 178.5881,280.8906 Q177.2756,279.2344 177.2756,276.1094 Q177.2756,272.9844 178.5881,271.3281 Q179.9163,269.6719 182.4163,269.6719 Q183.1194,269.6719 183.76,269.8281 Q184.4163,269.9844 184.9788,270.2813 L184.9788,273 Q184.3538,272.4219 183.76,272.1563 Q183.1663,271.875 182.5413,271.875 Q181.1975,271.875 180.51,272.9531 Q179.8225,274.0156 179.8225,276.1094 Q179.8225,278.2031 180.51,279.2813 Q181.1975,280.3438 182.5413,280.3438 Q183.1663,280.3438 183.76,280.0781 Q184.3538,279.7969 184.9788,279.2188 L184.9788,281.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.8691" x="196.01" y="281.1436">Item</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="168.01" x2="229.8791" y1="292.2969" y2="292.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="168.01" x2="229.8791" y1="300.2969" y2="300.2969"/></g><g class="entity" data-entity="Pagamento" data-source-line="9" data-uid="ent0006" id="entity_Pagamento"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="111.666" x="74.11" y="44.2969"/><ellipse cx="89.11" cy="60.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M92.0788,65.9375 Q91.5006,66.2344 90.86,66.375 Q90.2194,66.5313 89.5163,66.5313 Q87.0163,66.5313 85.6881,64.8906 Q84.3756,63.2344 84.3756,60.1094 Q84.3756,56.9844 85.6881,55.3281 Q87.0163,53.6719 89.5163,53.6719 Q90.2194,53.6719 90.86,53.8281 Q91.5163,53.9844 92.0788,54.2813 L92.0788,57 Q91.4538,56.4219 90.86,56.1563 Q90.2663,55.875 89.6413,55.875 Q88.2975,55.875 87.61,56.9531 Q86.9225,58.0156 86.9225,60.1094 Q86.9225,62.2031 87.61,63.2813 Q88.2975,64.3438 89.6413,64.3438 Q90.2663,64.3438 90.86,64.0781 Q91.4538,63.7969 92.0788,63.2188 L92.0788,65.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.666" x="103.11" y="65.1436">Pagamento</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="75.11" x2="184.776" y1="76.2969" y2="76.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="75.11" x2="184.776" y1="84.2969" y2="84.2969"/></g><g class="entity" data-entity="Avaliação" data-source-line="10" data-uid="ent0007" id="entity_Avaliação"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="99.6416" x="266.12" y="260.2969"/><ellipse cx="281.12" cy="276.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M284.0888,281.9375 Q283.5106,282.2344 282.87,282.375 Q282.2294,282.5313 281.5263,282.5313 Q279.0263,282.5313 277.6981,280.8906 Q276.3856,279.2344 276.3856,276.1094 Q276.3856,272.9844 277.6981,271.3281 Q279.0263,269.6719 281.5263,269.6719 Q282.2294,269.6719 282.87,269.8281 Q283.5263,269.9844 284.0888,270.2813 L284.0888,273 Q283.4638,272.4219 282.87,272.1563 Q282.2763,271.875 281.6513,271.875 Q280.3075,271.875 279.62,272.9531 Q278.9325,274.0156 278.9325,276.1094 Q278.9325,278.2031 279.62,279.2813 Q280.3075,280.3438 281.6513,280.3438 Q282.2763,280.3438 282.87,280.0781 Q283.4638,279.7969 284.0888,279.2188 L284.0888,281.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6416" x="295.12" y="281.1436">Avaliação</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="267.12" x2="364.7616" y1="292.2969" y2="292.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="267.12" x2="364.7616" y1="300.2969" y2="300.2969"/></g><g class="entity" data-entity="Restaurante" data-source-line="11" data-uid="ent0008" id="entity_Restaurante"><rect fill="#313139" height="48" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="117.8867" x="7" y="152.2969"/><ellipse cx="22" cy="168.2969" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M24.9688,173.9375 Q24.3906,174.2344 23.75,174.375 Q23.1094,174.5313 22.4063,174.5313 Q19.9063,174.5313 18.5781,172.8906 Q17.2656,171.2344 17.2656,168.1094 Q17.2656,164.9844 18.5781,163.3281 Q19.9063,161.6719 22.4063,161.6719 Q23.1094,161.6719 23.75,161.8281 Q24.4063,161.9844 24.9688,162.2813 L24.9688,165 Q24.3438,164.4219 23.75,164.1563 Q23.1563,163.875 22.5313,163.875 Q21.1875,163.875 20.5,164.9531 Q19.8125,166.0156 19.8125,168.1094 Q19.8125,170.2031 20.5,171.2813 Q21.1875,172.3438 22.5313,172.3438 Q23.1563,172.3438 23.75,172.0781 Q24.3438,171.7969 24.9688,171.2188 L24.9688,173.9375 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.8867" x="36" y="173.1436">Restaurante</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="8" x2="123.8867" y1="184.2969" y2="184.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="8" x2="123.8867" y1="192.2969" y2="192.2969"/></g><g class="link" data-entity-1="Cliente" data-entity-2="Avaliação" data-source-line="13" data-uid="lnk9" id="link_Cliente_Avaliação"><path codeLine="13" d="M315.94,218.5569 C315.94,236.2369 315.94,242.4269 315.94,260.0869" fill="none" id="Cliente-backto-Avaliação" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="315.94,200.5569,309.94,218.5569,321.94,218.5569,315.94,200.5569" style="stroke:#E7E7E7;stroke-width:1;"/></g><g class="link" data-entity-1="Pedido" data-entity-2="Cliente" data-source-line="14" data-uid="lnk11" id="link_Pedido_Cliente"><path codeLine="14" d="M239.82,176.2969 C251.51,176.2969 245.21,176.2969 256.91,176.2969" fill="none" id="Pedido-to-Cliente" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="274.91,176.2969,256.91,170.2969,256.91,182.2969,274.91,176.2969" style="stroke:#E7E7E7;stroke-width:1;"/></g><g class="link" data-entity-1="Pedido" data-entity-2="Item" data-source-line="15" data-uid="lnk12" id="link_Pedido_Item"><path codeLine="15" d="M199.5571,218.5561 C199.3971,236.2361 199.33,242.4269 199.16,260.0869" fill="none" id="Pedido-backto-Item" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="199.72,200.5569,193.5574,218.5018,205.5569,218.6104,199.72,200.5569" style="stroke:#E7E7E7;stroke-width:1;"/></g><g class="link" data-entity-1="Pagamento" data-entity-2="Pedido" data-source-line="17" data-uid="lnk14" id="link_Pagamento_Pedido"><path codeLine="17" d="M145.31,92.5569 C156.98,110.2369 163.0422,119.4056 174.7022,137.0656" fill="none" id="Pagamento-to-Pedido" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="184.62,152.0869,179.7093,133.7597,169.6952,140.3715,184.62,152.0869" style="stroke:#E7E7E7;stroke-width:1;"/></g><g class="link" data-entity-1="Motorista" data-entity-2="Pedido" data-source-line="18" data-uid="lnk15" id="link_Motorista_Pedido"><path codeLine="18" d="M244.6641,107.5794 C232.9941,125.2594 226.93,134.4269 215.27,152.0869" fill="none" id="Motorista-backto-Pedido" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="254.58,92.5569,239.6566,104.2741,249.6716,110.8847,254.58,92.5569" style="stroke:#E7E7E7;stroke-width:1;"/></g><g class="link" data-entity-1="Restaurante" data-entity-2="Pedido" data-source-line="19" data-uid="lnk16" id="link_Restaurante_Pedido"><path codeLine="19" d="M143.35,176.2969 C154.91,176.2969 148.47,176.2969 160.03,176.2969" fill="none" id="Restaurante-backto-Pedido" style="stroke:#E7E7E7;stroke-width:1;"/><polygon fill="none" points="125.35,176.2969,143.35,182.2969,143.35,170.2969,125.35,176.2969" style="stroke:#E7E7E7;stroke-width:1;"/></g></g></svg></div></div>
+<h3 id="versao-11">Versão 1.1</h3>
+<p><img alt="![Diagrama de Classes](../assets/diagrama_de_classes/diagrama_de_classes_1.1.png)" src="../assets/diagrama_de_classes/diagrama_de_classes_1.1.png" /></p>
+<h3 id="versao-20">Versão 2.0</h3>
+<p><img alt="![Diagrama de Classes](../assets/diagrama_de_classes/diagrama_de_classes_1.1.png)" src="../assets/diagrama_de_classes/diagrama_de_classes_2.0.png" /></p>
+<h4 id="rastreabilidade-de-requisitos">Rastreabilidade de Requisitos</h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US17, US18, US19, US20</td>
+<td>Torneio</td>
+</tr>
+<tr>
+<td>US01, US06, US07, US08</td>
+<td>Usuário</td>
+</tr>
+<tr>
+<td>US45</td>
+<td>Rodada</td>
+</tr>
+<tr>
+<td>US35</td>
+<td>Partida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusao">Conclusão</h2>
+<p align = "justify">
+Através do diagrama de classes, foi possível representar a estrutura do sistema a nível de classes e auxiliar na modelagem da arquitetura geral, além do banco de dados. Ao longo do desenvolvimento da disciplina, iremos adaptar e evoluir o diagrama e sua documentação para refletir no estado atual do projeto.
+</p>
+
+<h2 id="referencias">Referências</h2>
+<blockquote>
+<p>UML Class and Object Diagrams Overview. Disponível em https://www.uml-diagrams.org/class-diagrams-overview.html. Acesso em 21/09/20</p>
+<p>UML Class Diagram Tutorial. Disponível em https://www.youtube.com/watch?v=UI6lqHOVHic. Acesso em 21/09/20</p>
+<p>UML Class Relationship Diagrams. Disponível em https://www.cs.odu.edu/~zeil/cs330/latest/Public/classDiagrams/index.html#other-class-diagram-elements Acesso em 19/10/20</p>
+</blockquote>
+<h2 id="autores">Autor(es)</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21/09/20</td>
+<td>1.0</td>
+<td>Criação do documento</td>
+<td>João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan</td>
+</tr>
+<tr>
+<td>28/09/20</td>
+<td>1.1</td>
+<td>Ajustes no documento</td>
+<td>João Pedro e Renan Cristyan</td>
+</tr>
+<tr>
+<td>28/09/20</td>
+<td>1.2</td>
+<td>Adicionado diagrama de classes 1.1</td>
+<td>João Pedro e Renan Cristyan</td>
+</tr>
+<tr>
+<td>26/10/20</td>
+<td>2.0</td>
+<td>Adicionado diagrama de classes 2.0</td>
+<td>João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
