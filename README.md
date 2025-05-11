@@ -6,7 +6,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
  
  (Apague essa seção)
 
-# NomedoProjeto
+# Projeto ilha primeira
 
 **Número do Grupo**: VI<br>
 **Código da Disciplina**: FGA0208-T01<br>
