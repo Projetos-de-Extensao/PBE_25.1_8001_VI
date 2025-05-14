@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -62,3 +63,12 @@ class Avaliacao(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Pagamento(models.Model):
+    valor = models.DecimalField(max_digits=6, decimal_places=2)
+    data_pagamento = models.DateTimeField(default=timezone.now)
+    metodo_pagamento = models.CharField(max_length=50)
+    status = models.CharField(max_length=20, default='Pendente')
+    def  __str__(self):
+            return self.valor
