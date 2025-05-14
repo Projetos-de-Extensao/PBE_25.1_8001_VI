@@ -53,3 +53,12 @@ class Motorista(models.Model):
 
     def __str__(self):
         return self.nome
+    
+class Avaliacao(models.Model):
+    nome_cliente = models.CharField(max_length=100)
+    nome_loja = models.CharField(max_length=100)
+    nota = models.FloatField(max_length=2)
+    comentario = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nome
