@@ -12,10 +12,15 @@ class Pedido(models.Model):
     
     
 class Cliente(models.Model):
-    nome = models.CharField(max_length=100)
-    cpf = models.CharField(max_length=11, unique=True)
+    nome = models.CharField(max_length = 100)
+    cpf = models.CharField(max_length = 11, unique = True)
     data_nascimento = models.DateField()
     premium = models.BooleanField(default=False)
+    rua = models.CharField(max_length = 255)
+    cep = models.CharField(max_length = 10)
+    numero = models.CharField(max_length = 10)
+    #email = models.CharField(max_length = 100)
+    #senha = models.CharField(max_length = 50, validators=[MinLengthValidator(8)])
  
     def __str__(self):
         return self.nome
