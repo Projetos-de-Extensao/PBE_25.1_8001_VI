@@ -19,3 +19,17 @@ class Cliente(models.Model):
  
     def __str__(self):
         return self.nome
+    
+class Loja(models.Model):
+    nome = models.CharField(max_length=100)
+    cnpj = models.CharField(max_length=14, unique=True)
+    telefone = models.CharField(max_length=9)
+    email = models.CharField(max_length=30)
+    avaliacao = models.FloatField(max_length=2)
+    rua = models.CharField(max_length=255)
+    cep = models.CharField(max_length=10)
+    numero = models.CharField(max_length=10)
+    barro = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.nome
