@@ -33,3 +33,17 @@ class Loja(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Motorista(models.Model):
+    nome = models.CharField(max_length=100)
+    cpf_motorista = models.CharField(max_length=11, unique= True)
+    data_nascimento_motorista = models.DateField()
+    veiculo = models.CharField(max_length=30)
+    telefone = models.CharField(max_length=9)
+    email = models.CharField(max_length=30)
+    cnh = models.CharField(max_length=11, unique= True)
+    numero_registro = models.CharField(max_length=11, unique= True)
+    senha_motorista = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nome
