@@ -34,6 +34,7 @@ class Loja(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Motorista(models.Model):
     nome = models.CharField(max_length=100)
     cpf_motorista = models.CharField(max_length=11, unique= True)
