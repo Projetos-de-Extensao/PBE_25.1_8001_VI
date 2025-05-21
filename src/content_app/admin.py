@@ -1,5 +1,6 @@
 from django.contrib import admin
-from content_app.models import Content
+from content_app.models import Content, Pedido, Cliente, Motorista, Loja
+from content_app import models
 
 class ContentAdmin(admin.ModelAdmin):
     list_display = ('title', 'content_type', 'is_public')
@@ -14,6 +15,19 @@ class ContentAdmin(admin.ModelAdmin):
     ('conteúdo', {'fields': ('content_type', 'is_public')}),
   )
     
+class PedidoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'preco')
+
+class LojaAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'telefone')
+
+class ClienteAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'cpf')
+
+class MotoristaAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'cpf_motorista')
+
+    
 
 class ModelAdmin(admin.ModelAdmin):
     list_display = ('title', 'content_type', 'is_public')
@@ -24,3 +38,7 @@ class ModelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Content, ContentAdmin)
+admin.site.register(Pedido, PedidoAdmin)
+admin.site.register(Cliente, ClienteAdmin)
+admin.site.register(Loja, LojaAdmin)
+admin.site.register(Motorista, MotoristaAdmin)
