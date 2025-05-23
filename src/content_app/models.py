@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -9,7 +8,7 @@ class Content(models.Model):
         ('audio', 'Áudio'),
         ('video', 'Vídeo'),
     ]
-
+    
     title = models.CharField(max_length=255)
     description = models.TextField()
     file_url = models.URLField()
@@ -32,22 +31,17 @@ class Pedido(models.Model):
 
     def __str__(self):
         return self.nome
-
-
+    
+    
 class Cliente(models.Model):
-    nome = models.CharField(max_length = 100)
-    cpf = models.CharField(max_length = 11, unique = True)
+    nome = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=11, unique=True)
     data_nascimento = models.DateField()
     premium = models.BooleanField(default=False)
-    rua = models.CharField(max_length = 255)
-    cep = models.CharField(max_length = 10)
-    numero = models.CharField(max_length = 10)
-    #email = models.CharField(max_length = 100)
-    #senha = models.CharField(max_length = 50, validators=[MinLengthValidator(8)])
-
+ 
     def __str__(self):
         return self.nome
-
+    
 class Loja(models.Model):
     nome = models.CharField(max_length=100)
     cnpj = models.CharField(max_length=14, unique=True)
@@ -76,21 +70,3 @@ class Motorista(models.Model):
 
     def __str__(self):
         return self.nome
-
-class Avaliacao(models.Model):
-    nome_cliente = models.CharField(max_length=100)
-    nome_loja = models.CharField(max_length=100)
-    nota = models.FloatField(max_length=2)
-    comentario = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.nome
-
-
-class Pagamento(models.Model):
-    valor = models.DecimalField(max_digits=6, decimal_places=2)
-    data_pagamento = models.DateTimeField(default=timezone.now)
-    metodo_pagamento = models.CharField(max_length=50)
-    status = models.CharField(max_length=20, default='Pendente')
-    def  __str__(self):
-            return self.valor
