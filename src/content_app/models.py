@@ -1,7 +1,29 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
+
+class Content(models.Model):
+    CONTENT_TYPES = [
+        ('audio', 'Áudio'),
+        ('video', 'Vídeo'),
+    ]
+
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    file_url = models.URLField()
+    thumbnail_url = models.URLField(blank=True, null=True)
+    content_type = models.CharField(max_length=10, choices=CONTENT_TYPES)
+    upload_date = models.DateTimeField(auto_now_add=True)
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+    is_public = models.BooleanField(default=True)
+    status = models.CharField(max_length=20, default='published')
+    creator = models.ForeignKey(User, related_name='contents', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
 
 class Pedido(models.Model):
     nome = models.CharField(max_length=100)
@@ -10,8 +32,8 @@ class Pedido(models.Model):
 
     def __str__(self):
         return self.nome
-    
-    
+
+
 class Cliente(models.Model):
     nome = models.CharField(max_length = 100)
     cpf = models.CharField(max_length = 11, unique = True)
@@ -22,10 +44,10 @@ class Cliente(models.Model):
     numero = models.CharField(max_length = 10)
     #email = models.CharField(max_length = 100)
     #senha = models.CharField(max_length = 50, validators=[MinLengthValidator(8)])
- 
+
     def __str__(self):
         return self.nome
-    
+
 class Loja(models.Model):
     nome = models.CharField(max_length=100)
     cnpj = models.CharField(max_length=14, unique=True)
@@ -54,7 +76,7 @@ class Motorista(models.Model):
 
     def __str__(self):
         return self.nome
-    
+
 class Avaliacao(models.Model):
     nome_cliente = models.CharField(max_length=100)
     nome_loja = models.CharField(max_length=100)
