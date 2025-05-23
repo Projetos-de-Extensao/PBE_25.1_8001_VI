@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
 
@@ -8,7 +9,7 @@ class Content(models.Model):
         ('audio', 'Áudio'),
         ('video', 'Vídeo'),
     ]
-    
+
     title = models.CharField(max_length=255)
     description = models.TextField()
     file_url = models.URLField()
@@ -24,24 +25,42 @@ class Content(models.Model):
     def __str__(self):
         return self.title
 
-class Pedido(models.Model):
+class Produto(models.Model):
     nome = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=6, decimal_places=2)
     descricao = models.TextField()
 
+
     def __str__(self):
         return self.nome
-    
-    
+
+class Pedido(models.Model):
+    descricao = models.TextField(blank=True, null=True)  # Descrição do pedido
+    cliente = models.ForeignKey(User, on_delete=models.CASCADE, related_name='pedido')  # Quem fez o pedido
+    produtos = models.ManyToManyField(Content, related_name='pedido')  # Produtos incluídos no pedido
+    preco = models.DecimalField(max_digits=6, decimal_places=2) #somatório do preço dos pedidos
+    data_de_criacao = models.DateTimeField(auto_now_add=True)  # Data de criação
+    ultima_atualizacao = models.DateTimeField(auto_now=True)  # Data de última atualização
+    status = models.CharField(max_length=20, default='Em processo') # O status do pedido
+
+    class Meta:
+        ordering = ['data_de_criacao']
+        verbose_name = 'Pedido'
+        verbose_name_plural = 'Pedidos'
+
+    def __str__(self):
+        return self.cliente
+
+
 class Cliente(models.Model):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=11, unique=True)
     data_nascimento = models.DateField()
     premium = models.BooleanField(default=False)
- 
+
     def __str__(self):
         return self.nome
-    
+
 class Loja(models.Model):
     nome = models.CharField(max_length=100)
     cnpj = models.CharField(max_length=14, unique=True)
@@ -70,3 +89,21 @@ class Motorista(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Pagamento(models.Model):
+    valor = models.DecimalField(max_digits=6, decimal_places=2)
+    data_pagamento = models.DateTimeField(default=timezone.now)
+    metodo_pagamento = models.CharField(max_length=50)
+    status = models.CharField(max_length=20, default='Pendente')
+
+    def  __str__(self):
+            return self.valor
+
+class Avaliacao(models.Model):
+    nome_cliente = models.CharField(max_length=100)
+    nome_loja = models.CharField(max_length=100)
+    nota = models.FloatField(max_length=2)
+    comentario = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nota

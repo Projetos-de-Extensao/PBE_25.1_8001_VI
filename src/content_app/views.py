@@ -1,10 +1,10 @@
 # Create your views here.
 from rest_framework import viewsets
-from .models import Cliente,Pedido,Loja
-from .serializers import ClienteSerializer, PedidoSerializer, LojaSerializer
+from .models import Cliente,Produto,Loja
+from .serializers import ClienteSerializer, ProdutoSerializer, LojaSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-#criando as views do cliente e pedido
+#criando as views do cliente e produto
 
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
@@ -13,11 +13,11 @@ class ClienteViewSet(viewsets.ModelViewSet):
 
     # def perform_create(self, serializer):
     #     serializer.save(creator=self.request.user)
-        
-        
-class PedidoViewSet(viewsets.ModelViewSet):
-    queryset = Pedido.objects.all()
-    serializer_class = PedidoSerializer
+
+
+class ProdutoViewSet(viewsets.ModelViewSet):
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
     #permission_classes = [IsAuthenticatedOrReadOnly]
 
     # def perform_create(self, serializer):

@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from .models import Cliente,Pedido,Loja
+from .models import Cliente,Produto,Loja
 
-class PedidoSerializer(serializers.ModelSerializer):
+class ProdutoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Pedido
+        model = Produto
         fields = '__all__'
-        
+
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
