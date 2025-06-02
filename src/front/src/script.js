@@ -1,26 +1,41 @@
-const apiUrl = "http://127.0.0.1:8000/api/contents/";
+const apiUrl = "http://127.0.0.1:8000/api/produto/";
 
 // Função para obter e listar conteúdos
 async function fetchContents() {
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch('http://127.0.0.1:8000/api/produto/', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Token 9ba76116e5a4da39be897dcbfaeafb32f54dfde4',
+        'Content-Type': 'application/json'
+      }
+    });
+
     const data = await response.json();
     const contentTable = document.querySelector("#contentTable tbody");
     contentTable.innerHTML = "";
+    let valor_total = 0.0;
 
-    data.forEach((content) => {
+    data.forEach((produto) => {
+      valor_total += parseFloat(produto.preco);
       const row = `
-                        <tr>
-                            <td>${content.id}</td>
-                            <td>${content.title}</td>
-                            <td>${content.description}</td>
-                            <td>${content.content_type}</td>
-                            <td>${content.is_public ? "Sim" : "Não"}</td>
-                            <td>${content.creator}</td>
-                        </tr>
-                    `;
+        <tr>
+          <td>${produto.id}</td>
+          <td>${produto.nome}</td>
+          <td>${produto.preco}</td>
+          <td>${produto.descricao}</td>
+        </tr>
+      `;
       contentTable.innerHTML += row;
     });
+
+    const row1 = `
+    <tr>
+      <td colspan="4" text-align: center;>Valor total: R$ ${valor_total}</td>
+    </tr>
+    `;
+    contentTable.innerHTML += row1
+
   } catch (error) {
     console.error("Erro ao buscar conteúdos:", error);
   }
@@ -30,42 +45,33 @@ async function fetchContents() {
 async function addContent(event) {
   event.preventDefault();
 
-  const titleElement = document.getElementById("title");
-  const descriptionElement = document.getElementById("description");
-  const fileUrlElement = document.getElementById("file_url");
-  const thumbnailUrlElement = document.getElementById("thumbnail_url");
-  const contentTypeElement = document.getElementById("content_type");
-  const isPublicElement = document.getElementById("is_public");
-  const creatorElement = document.getElementById("creator");
+  const nomeElement = document.getElementById("nome");
+  const precoElement = document.getElementById("preco");
+  const descricaoElement = document.getElementById("descricao");
 
-  if (!titleElement || !descriptionElement || !fileUrlElement || !thumbnailUrlElement || !contentTypeElement || !isPublicElement || !creatorElement) {
+
+  if (!nomeElement || !descricaoElement || !precoElement) {
     alert("Erro: Um ou mais elementos do formulário não foram encontrados.");
     return;
   }
 
-  const title = titleElement.value;
-  const description = descriptionElement.value;
-  const file_url = fileUrlElement.value;
-  const thumbnail_url = thumbnailUrlElement.value;
-  const content_type = contentTypeElement.value;
-  const is_public = isPublicElement.checked;
-  const creator = creatorElement.value;
+  const nome = nomeElement.value;
+  const preco = precoElement.value;
+  const descricao = descricaoElement.value;
+
 
   const contentData = {
-    title,
-    description,
-    file_url,
-    thumbnail_url,
-    content_type,
-    is_public,
-    creator
+    nome,
+    preco,
+    descricao,
   };
 
   try {
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        'Authorization': 'Token 9ba76116e5a4da39be897dcbfaeafb32f54dfde4',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(contentData),
     });

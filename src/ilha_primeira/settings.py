@@ -58,7 +58,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",  # Exemplo para um app local
    ]
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = ['content-type', 'authorization']
+CORS_ALLOW_HEADERS = ['content-type', 'authorization', 'Authorization']
 
 ROOT_URLCONF = 'ilha_primeira.urls'
 

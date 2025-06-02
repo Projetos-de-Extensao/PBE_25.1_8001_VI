@@ -9,7 +9,6 @@ class Produto(models.Model):
     preco = models.DecimalField(max_digits=6, decimal_places=2)
     descricao = models.TextField()
 
-
     def __str__(self):
         return self.nome
 
@@ -23,7 +22,6 @@ class Motorista(models.Model):
     cnh = models.CharField(max_length=11, unique= True)
     numero_registro = models.CharField(max_length=11, unique= True)
     senha_motorista = models.CharField(max_length=30)
-
 
     def __str__(self):
         return self.nome

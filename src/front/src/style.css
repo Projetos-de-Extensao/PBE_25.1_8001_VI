@@ -8,6 +8,7 @@ h1 {
 }
 .content-list {
     margin-top: 20px;
+    text-align: center;
 }
 .content-list table {
     width: 100%;
@@ -16,7 +17,7 @@ h1 {
 .content-list th, .content-list td {
     border: 1px solid #ccc;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 .form-section {
     margin-bottom: 20px;
