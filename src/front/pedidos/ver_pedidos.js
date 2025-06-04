@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (response.ok) {
       alert("Conteúdo adicionado com sucesso!");
-      document.getElementById("contentForm").reset(); // Limpa o formulário
+      // Limpa o formulário
     } else {
       const errorData = await response.json();
       alert(`Erro ao adicionar conteúdo 1: ${errorData.message || response.statusText}`);
