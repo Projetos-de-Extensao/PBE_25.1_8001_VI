@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
-        'Authorization': 'Token d954d2903814c574fb1319f1d826bc1cd82ffe27',
+        'Authorization': `Token ${localStorage.getItem('Token')}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(contentData),

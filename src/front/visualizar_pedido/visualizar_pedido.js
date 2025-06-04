@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // URL da API para buscar os pedidos
     const apiUrl = "http://127.0.0.1:8000/api/pedido/";
     // Token de autorização (idealmente, não deveria estar hardcoded assim em produção)
-    const authToken = 'Token a8788fa30133860b754cdff7bb6765b53be942bb';
+    const authToken = `Token ${localStorage.getItem('Token')}`;
 
     // Função para carregar os pedidos confirmados da API
     async function carregarPedidosConfirmados() {

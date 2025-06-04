@@ -1,55 +1,97 @@
 // script.js
-const apiUrl = "http://127.0.0.1:8000/api/cliente/";
+const apiUrl = "http://127.0.0.1:8000/api/token/"; // Certifique-se que esta URL está correta e o servidor está rodando
 const loginForm = document.getElementById('loginForm');
 const messageElement = document.getElementById('message');
 
-function exibir_erro(){
-    messageElement.textContent = 'Email ou senha incorretos.'
-    messageElement.style.color = 'red';
+// Função para exibir mensagens de erro ou sucesso
+function showMessage(text, color) {
+  messageElement.textContent = text;
+  messageElement.style.color = color;
 }
-async function fetchContents() {
+
+async function fetchLoginToken() { // Renomeado para clareza e para retornar o token
   try {
-    const response = await fetch(apiUrl, {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Token d954d2903814c574fb1319f1d826bc1cd82ffe27',
-        'Content-Type': 'application/json'
-      }
-    });
-    const email = document.getElementById('email').value;
+    const username = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const data = await response.json();
+    // Validação básica dos campos (opcional, mas recomendado)
+    if (!username || !password) {
+      showMessage('Por favor, preencha o email e a senha.', 'red');
+      return null; // Retorna null se os campos não estiverem preenchidos
+    }
 
-    data.forEach((cliente) => {
-        if (cliente.nome === email && cliente.cpf === password){
-            localStorage.setItem('clienteId', cliente.id);
-            window.location.replace('/home/home.html')
-        }
+    const credentials = { username, password }; // 'username' é mais comum que 'email' para o backend Django Rest Framework SimpleJWT
+
+    console.log("Enviando credenciais:", credentials); // Log para depuração
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
     });
 
+    console.log("Resposta recebida do servidor:", response); // Log para depuração
+
+    if (!response.ok) {
+      // Se a resposta não for OK (ex: 400, 401, 403, 404, 500)
+      let errorMessage = `Erro: ${response.status} - ${response.statusText}`;
+      try {
+        const errorData = await response.json(); // Tenta pegar mais detalhes do erro do corpo da resposta
+        console.error("Detalhes do erro do servidor:", errorData);
+        // A API de token do SimpleJWT geralmente retorna erros em 'detail' ou nomes de campos
+        if (errorData.detail) {
+          errorMessage = errorData.detail;
+        } else if (errorData.username) {
+          errorMessage = `Erro no campo email: ${errorData.username.join(', ')}`;
+        } else if (errorData.password) {
+          errorMessage = `Erro no campo senha: ${errorData.password.join(', ')}`;
+        } else {
+            errorMessage = 'Email ou senha incorretos.'; // Mensagem genérica se não houver detalhes específicos
+        }
+      } catch (e) {
+        // Se o corpo da resposta não for JSON ou estiver vazio
+        console.error("Não foi possível parsear a resposta de erro como JSON:", e);
+        errorMessage = 'Email ou senha incorretos. Resposta do servidor não é JSON.';
+      }
+      showMessage(errorMessage, 'red');
+      return null; // Retorna null em caso de erro de resposta
+    }
+
+    // Se a resposta for OK (status 2xx)
+    const data = await response.json();
+    console.log("Token recebido:", data); // O token geralmente está em data.access e data.refresh
+    return data; // Retorna os dados (que devem incluir o token)
+
   } catch (error) {
-    console.error("Erro ao buscar dados:", error);
+    // Erro de rede ou outro erro durante o fetch
+    console.error("Erro na requisição fetch:", error);
+    showMessage('Erro de conexão ao tentar fazer login. Verifique sua rede e se o servidor está online.', 'red');
+    return null; // Retorna null em caso de erro de fetch
   }
 }
 
-loginForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+loginForm.addEventListener('submit', async function(event) { // Tornamos a função do listener async
+  event.preventDefault(); // Impede o envio padrão do formulário
+  messageElement.textContent = ''; // Limpa mensagens anteriores
 
+  // Chama a função fetchLoginToken e espera pelo resultado
+  const tokenData = await fetchLoginToken();
 
-    fetchContents();
-    setTimeout(exibir_erro, 500)
+  if (tokenData) {
+    // Sucesso! O token foi recebido
+    showMessage('Login bem-sucedido!', 'green');
+    console.log('Token de acesso:', tokenData);
+    localStorage.setItem('Token', tokenData.token);
 
+    // Aqui você pode, por exemplo, salvar o token no localStorage e redirecionar o usuário
+    // localStorage.setItem('accessToken', tokenData.access);
+    // localStorage.setItem('refreshToken', tokenData.refresh);
+    // window.location.href = '/dashboard'; // Exemplo de redirecionamento
+  } else {
+    // Se tokenData for null ou não contiver 'access', o erro já foi exibido por fetchLoginToken
+    console.log("Login falhou ou token não recebido.");
+    // A função showMessage já foi chamada dentro de fetchLoginToken em caso de erro
+  }
 });
-
-
-
-
-
-// Função para obter e listar conteúdos
-
-
-
-
-
-
