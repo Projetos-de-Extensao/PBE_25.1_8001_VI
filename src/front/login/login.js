@@ -1,5 +1,5 @@
 // script.js
-const apiUrl = "http://127.0.0.1:8000/api/clientes/";
+const apiUrl = "http://127.0.0.1:8000/api/cliente/";
 const loginForm = document.getElementById('loginForm');
 const messageElement = document.getElementById('message');
 
@@ -12,7 +12,7 @@ async function fetchContents() {
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {
-        'Authorization': 'Token 9ba76116e5a4da39be897dcbfaeafb32f54dfde4',
+        'Authorization': 'Token d954d2903814c574fb1319f1d826bc1cd82ffe27',
         'Content-Type': 'application/json'
       }
     });
@@ -23,6 +23,7 @@ async function fetchContents() {
 
     data.forEach((cliente) => {
         if (cliente.nome === email && cliente.cpf === password){
+            localStorage.setItem('clienteId', cliente.id);
             window.location.replace('/home/home.html')
         }
     });

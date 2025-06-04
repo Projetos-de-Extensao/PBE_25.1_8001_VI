@@ -42,7 +42,7 @@ class Pedido(models.Model):
         ('em_analise', 'Em Análise'),
         ('confirmado', 'Pedido Confirmado'), #status possiveis
     ]
-
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='pedidos')  # Quem fez o pedido
     preco = models.DecimalField(max_digits=6, decimal_places=2) #somatório do preço dos pedidos
     data_de_criacao = models.DateTimeField(auto_now_add=True)  # Data de criação
     ultima_atualizacao = models.DateTimeField(auto_now=True)  # Data de última atualização

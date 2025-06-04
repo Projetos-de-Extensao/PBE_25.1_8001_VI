@@ -1,3 +1,45 @@
+const apiUrl = "http://127.0.0.1:8000/api/pedido/";
+
+
+
+async function fetchContents() {
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Token d954d2903814c574fb1319f1d826bc1cd82ffe27',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const data = await response.json();
+    const contentTable = document.querySelector("#contentTable tbody");
+    contentTable.innerHTML = "";
+
+    data.forEach((produto) => {
+      const row = `
+        <tr>
+          <td>${produto.id}</td>
+          <td>${produto.nome}</td>
+          <td>${produto.preco}</td>
+          <td>${produto.descricao}</td>
+        </tr>
+      `;
+      contentTable.innerHTML += row;
+    });
+
+    const row1 = `
+    <tr>
+      <td colspan="4" text-align: center;>Valor total: R$ ${valor_total}</td>
+    </tr>
+    `;
+    contentTable.innerHTML += row1
+
+  } catch (error) {
+    console.error("Erro ao buscar conteúdos:", error);
+  }
+}
+
 // Aguarda o DOM estar completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
     // Seleciona os elementos do DOM

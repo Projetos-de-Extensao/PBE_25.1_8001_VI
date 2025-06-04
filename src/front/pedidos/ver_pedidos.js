@@ -1,4 +1,4 @@
-const apiUrl = "http://127.0.0.1:8000/api/pedido/";
+const apiUrl = "http://127.0.0.1:8000/api/pedido/"; // Esta variável não está sendo usada no script atual
 
 document.addEventListener("DOMContentLoaded", () => {
   const formAdicionarProduto = document.getElementById("formAdicionarProduto");
@@ -19,21 +19,54 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chave para o localStorage
   const LOCAL_STORAGE_KEY = "listaDeProdutosApp";
 
-  // Função para carregar produtos do localStorage
+  // Função para carregar produtos do localStorage de forma mais robusta
   function carregarProdutos() {
     const produtosJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
-    return produtosJSON ? JSON.parse(produtosJSON) : [];
+    if (!produtosJSON) {
+      return []; // Retorna array vazio se não houver nada no localStorage
+    }
+    try {
+      const parsed = JSON.parse(produtosJSON);
+      // Verifica se o resultado do parse é realmente um array
+      if (Array.isArray(parsed)) {
+        return parsed;
+      } else {
+        // Se não for um array, os dados estão em um formato inesperado ou corrompidos
+        console.warn(
+          "Dados no localStorage para produtos não são um array. Retornando lista vazia.",
+          parsed
+        );
+        // Opcional: Remover os dados inválidos para evitar problemas futuros
+        // localStorage.removeItem(LOCAL_STORAGE_KEY);
+        return [];
+      }
+    } catch (error) {
+      // Se JSON.parse falhar (JSON malformado)
+      console.error(
+        "Erro ao parsear produtos do localStorage. Retornando lista vazia.",
+        error
+      );
+      // Opcional: Remover os dados inválidos para evitar problemas futuros
+      // localStorage.removeItem(LOCAL_STORAGE_KEY);
+      return [];
+    }
   }
 
   // Função para salvar produtos no localStorage
   function salvarProdutos(produtos) {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(produtos));
+    // Garante que estamos salvando um array
+    if (Array.isArray(produtos)) {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(produtos));
+    } else {
+      console.error("Tentativa de salvar dados que não são um array no localStorage.", produtos);
+      // Salva um array vazio para evitar corromper o localStorage com tipos errados
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([]));
+    }
   }
 
   // Função para renderizar os produtos na tela
   function renderizarProdutos() {
-    const produtos = carregarProdutos();
-    const Json = carregarProdutos();
+    const produtos = carregarProdutos(); // Carrega os produtos
     listaProdutosDiv.innerHTML = ""; // Limpa a lista atual
 
     if (produtos.length === 0) {
@@ -42,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       mensagemSemProdutosDiv.classList.add("hidden");
       listaProdutosDiv.classList.remove("hidden");
-      produtos.forEach((produto) => {
+      produtos.forEach((produto) => { // Agora 'produtos' deve ser sempre um array
         const produtoDiv = document.createElement("div");
         produtoDiv.classList.add(
           "bg-slate-50",
@@ -55,28 +88,34 @@ document.addEventListener("DOMContentLoaded", () => {
           "justify-between",
           "items-start",
           "sm:items-center",
-          "feedback-animation"
+          "feedback-animation" // Garanta que esta classe CSS exista se for para animação
         );
         produtoDiv.setAttribute("data-id", produto.id);
 
-        const precoFormatado = parseFloat(produto.preco).toLocaleString(
-          "pt-BR",
-          { style: "currency", currency: "BRL" }
-        );
+        // Verifica se produto.preco é um número antes de formatar
+        const precoNumerico = parseFloat(produto.preco);
+        const precoFormatado = !isNaN(precoNumerico)
+          ? precoNumerico.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })
+          : "Preço inválido";
 
         produtoDiv.innerHTML = `
-        <div class="flex-grow mb-3 sm:mb-0">
-            <h3 class="text-lg font-semibold text-sky-700">${produto.nome}</h3>
+          <div class="flex-grow mb-3 sm:mb-0">
+            <h3 class="text-lg font-semibold text-sky-700">${
+              produto.nome || "Nome não disponível"
+            }</h3>
             <p class="text-md text-slate-600">${precoFormatado}</p>
             <p class="text-sm text-slate-500 mt-1">${
               produto.descricao || "Sem descrição"
             }</p>
-        </div>
-        <button data-id="${produto.id}"
-                class="remover-produto-btn bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-3 rounded-md text-sm transition duration-150 ease-in-out self-start sm:self-center">
+          </div>
+          <button data-id="${produto.id}"
+                  class="remover-produto-btn bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-3 rounded-md text-sm transition duration-150 ease-in-out self-start sm:self-center">
             Remover
-        </button>
-    `;
+          </button>
+        `;
         listaProdutosDiv.appendChild(produtoDiv);
       });
     }
@@ -104,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const descricao = descricaoProdutoInput.value.trim();
 
     if (nome === "" || isNaN(preco) || preco < 0) {
-      // Poderia adicionar uma mensagem de erro mais visual aqui
+      // TODO: Substituir alert por uma mensagem de erro mais visual na UI
       alert("Por favor, preencha o nome e um preço válido.");
       return;
     }
@@ -127,16 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Função para atualizar os listeners dos botões de remoção
+  // Esta abordagem de clonar e substituir funciona para remover listeners antigos.
   function atualizarListenersRemocao() {
     const botoesRemover = document.querySelectorAll(".remover-produto-btn");
     botoesRemover.forEach((botao) => {
-      // Remove listener antigo para evitar duplicação se a função for chamada múltiplas vezes
-      botao.replaceWith(botao.cloneNode(true));
-    });
-    // Adiciona novos listeners
-    document.querySelectorAll(".remover-produto-btn").forEach((botao) => {
-      botao.addEventListener("click", (event) => {
-        const idProduto = event.target.dataset.id;
+      const novoBotao = botao.cloneNode(true); // Clona o botão
+      botao.parentNode.replaceChild(novoBotao, botao); // Substitui o botão antigo pelo novo (sem listeners)
+
+      // Adiciona o event listener ao novo botão
+      novoBotao.addEventListener("click", (event) => {
+        const idProduto = event.target.dataset.id; // ou novoBotao.dataset.id
         mostrarModalConfirmacao(idProduto);
       });
     });
@@ -144,32 +183,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listeners para o modal de confirmação
   botaoCancelarRemocao.addEventListener("click", esconderModalConfirmacao);
+
   botaoConfirmarRemocao.addEventListener("click", () => {
     if (produtoIdParaRemover) {
       let produtos = carregarProdutos();
       produtos = produtos.filter((p) => p.id !== produtoIdParaRemover);
       salvarProdutos(produtos);
-      renderizarProdutos(); // Re-renderiza a lista
+      // A animação de remoção pode ser complexa de sincronizar perfeitamente
+      // com a re-renderização. Uma abordagem mais simples é apenas re-renderizar.
+      renderizarProdutos();
       esconderModalConfirmacao();
-
-      // Animação de feedback no item removido (se ainda estiver visível por algum motivo, ou na lista)
-      const itemRemovido = listaProdutosDiv.querySelector(
-        `[data-id="${produtoIdParaRemover}"]`
-      );
-      if (itemRemovido) {
-        // Se o item ainda existir no DOM antes da re-renderização completa
-        itemRemovido.classList.add(
-          "opacity-50",
-          "scale-95",
-          "transition-all",
-          "duration-300"
-        );
-        setTimeout(() => renderizarProdutos(), 300); // Re-renderiza após a animação de saída
-      } else {
-        renderizarProdutos();
-      }
     }
   });
+
+  // Renderiza os produtos ao carregar a página
+  renderizarProdutos();
+
 
   // Define o ano atual no rodapé
   document.getElementById("currentYear").textContent = new Date().getFullYear();
@@ -184,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
-        'Authorization': 'Token 342f17fd52137da7cb1627fbc4cd1bda15f50895',
+        'Authorization': 'Token d954d2903814c574fb1319f1d826bc1cd82ffe27',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(contentData),
@@ -192,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (response.ok) {
       alert("Conteúdo adicionado com sucesso!");
-      fetchContents(); // Atualiza a lista de conteúdos
       document.getElementById("contentForm").reset(); // Limpa o formulário
     } else {
       const errorData = await response.json();
@@ -226,12 +254,13 @@ const descricao = ConfirmaPedido();
 
 console.log(descricao, preco);
 
-
+  const cliente = localStorage.getItem('clienteId');
 
 
   const contentData = {
     preco,
     descricao,
+    cliente
   };
 
 
@@ -239,7 +268,6 @@ console.log(descricao, preco);
   console.log(contentData)
 console.log(preco)
 console.log(descricao)
-console.log(id)
 })
 
 });

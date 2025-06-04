@@ -10,7 +10,7 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco', 'descricao')
 
 class PedidoAdmin(admin.ModelAdmin):
-    list_display = ('preco', 'status', 'motorista')
+    list_display = ('cliente','preco', 'status', 'motorista')
 
 class MotoristaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'cpf_motorista', 'veiculo', 'telefone', 'cnh')
