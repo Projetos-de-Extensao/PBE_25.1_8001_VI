@@ -9,6 +9,46 @@ function showMessage(text, color) {
   messageElement.style.color = color;
 }
 
+async function fetchContents() {
+  try {
+    const response = await fetch('http://127.0.0.1:8000/api/produto/', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Token bc3eaff461b276fd9a62c7041b6605f841598d8a',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const data = await response.json();
+    const contentTable = document.querySelector("#contentTable tbody");
+    contentTable.innerHTML = "";
+    let valor_total = 0.0;
+
+    data.forEach((produto) => {
+      valor_total += parseFloat(produto.preco);
+      const row = `
+        <tr>
+          <td>${produto.id}</td>
+          <td>${produto.nome}</td>
+          <td>${produto.preco}</td>
+          <td>${produto.descricao}</td>
+        </tr>
+      `;
+      contentTable.innerHTML += row;
+    });
+
+    const row1 = `
+    <tr>
+      <td colspan="4" text-align: center;>Valor total: R$ ${valor_total}</td>
+    </tr>
+    `;
+    contentTable.innerHTML += row1
+
+  } catch (error) {
+    console.error("Erro ao buscar conteúdos:", error);
+  }
+}
+
 async function fetchLoginToken() { // Renomeado para clareza e para retornar o token
   try {
     const username = document.getElementById('email').value;
@@ -84,6 +124,8 @@ loginForm.addEventListener('submit', async function(event) { // Tornamos a funç
     showMessage('Login bem-sucedido!', 'green');
     console.log('Token de acesso:', tokenData);
     localStorage.setItem('Token', tokenData.token);
+    //chamar a funcao que faz o get e salvar o id
+    window.location.href = '/home/home.html'
 
     // Aqui você pode, por exemplo, salvar o token no localStorage e redirecionar o usuário
     // localStorage.setItem('accessToken', tokenData.access);

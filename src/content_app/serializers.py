@@ -20,3 +20,4 @@ class PedidoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pedido
         fields = '__all__'
+        read_only_fields = ('cliente', 'data_de_criacao', 'ultima_atualizacao', 'status')

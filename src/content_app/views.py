@@ -21,6 +21,7 @@ class MotoristaViewSet(viewsets.ModelViewSet):
 class PedidoViewSet(viewsets.ModelViewSet):
     serializer_class = PedidoSerializer
     queryset = Pedido.objects.all()
+    permission_classes = [IsAuthenticated]
     
     def get_queryset(self):
         user_logado = self.request.user
@@ -29,3 +30,6 @@ class PedidoViewSet(viewsets.ModelViewSet):
             return Pedido.objects.all().order_by('data_de_criacao')
         else:
             return Pedido.objects.filter(cliente=user_logado).order_by('data_de_criacao')
+    
+    def perform_create(self, serializer):
+        serializer.save(cliente=self.request.user)

@@ -241,7 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
     Json.forEach(element => {PostDescricao += `Nome: ${element.nome} - R$ ${element.preco} - Descrição ${element.descricao}
       `;
       preco += element.preco})
-console.log("Foi")
     return PostDescricao
 
 
@@ -252,22 +251,19 @@ document.getElementById("botaoConfirmarPedido").addEventListener("click", event 
 event.preventDefault();
 const descricao = ConfirmaPedido();
 
-console.log(descricao, preco);
 
-  const cliente = localStorage.getItem('clienteId');
+  //const cliente = localStorage.getItem('clienteId');
 
 
   const contentData = {
     preco,
-    descricao,
-    cliente
+    descricao
+    //cliente
   };
 
 
   FazPost(contentData);
   console.log(contentData)
-console.log(preco)
-console.log(descricao)
 })
 
 });
