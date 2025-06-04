@@ -6,7 +6,7 @@ async function fetchContents() {
     const response = await fetch('http://127.0.0.1:8000/api/produto/', {
       method: 'GET',
       headers: {
-        'Authorization': 'Token 9ba76116e5a4da39be897dcbfaeafb32f54dfde4',
+        'Authorization': 'Token bc3eaff461b276fd9a62c7041b6605f841598d8a',
         'Content-Type': 'application/json'
       }
     });
@@ -43,6 +43,7 @@ async function fetchContents() {
 
 // Função para adicionar novo conteúdo
 async function addContent(event) {
+
   event.preventDefault();
 
   const nomeElement = document.getElementById("nome");
@@ -65,7 +66,9 @@ async function addContent(event) {
     preco,
     descricao,
   };
+  console.log(contentData)
 
+/*
   try {
     const response = await fetch(apiUrl, {
       method: "POST",
@@ -86,9 +89,8 @@ async function addContent(event) {
     }
   } catch (error) {
     console.error("Erro ao adicionar conteúdo 2:", error);
-  }
+  }*/
 }
-
 // Inicializar a página carregando os conteúdos
 document.addEventListener("DOMContentLoaded", fetchContents);
 

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnAdicionarProduto) {
         btnAdicionarProduto.addEventListener('click', function() {
-            window.location.href = '/src/adicionar_produto.html';
+            window.location.href = '/adicionar_produto/adicionar_produto.html';
         });
     }
 

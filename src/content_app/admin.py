@@ -1,24 +1,21 @@
 from django.contrib import admin
-from content_app.models import Cliente, Motorista, Produto
+from content_app.models import Cliente, Motorista, Produto, Pedido
 
 
 
 class ClienteAdmin(admin.ModelAdmin):
     list_display = ('nome', 'cpf')
 
-class MotoristaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'cpf_motorista')
-
 class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco', 'descricao')
 
-class ModelAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content_type', 'is_public')
-    list_filter = ('content_type', 'is_public')
-    search_fields = ('title', 'description')
-    ordering = ['-upload_date']
-    fields = ('title', 'description', 'file_url', 'thumbnail_url', 'creator')
+class PedidoAdmin(admin.ModelAdmin):
+    list_display = ('preco', 'status', 'motorista')
+
+class MotoristaAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'cpf_motorista', 'veiculo', 'telefone', 'cnh')
 
 admin.site.register(Cliente, ClienteAdmin)
-admin.site.register(Motorista, MotoristaAdmin)
 admin.site.register(Produto,ProdutoAdmin)
+admin.site.register(Pedido, PedidoAdmin)
+admin.site.register(Motorista, MotoristaAdmin)

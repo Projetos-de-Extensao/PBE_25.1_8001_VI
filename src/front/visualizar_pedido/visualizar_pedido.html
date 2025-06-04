@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos Enviados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="visualizar_pedido.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col items-center pt-8 sm:pt-12 px-4">
+
+    <div class="w-full max-w-4xl bg-white shadow-xl rounded-lg p-6 sm:p-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-sky-600">Meus Pedidos Enviados</h1>
+            <p class="text-slate-500 mt-2">Veja o histórico dos seus pedidos confirmados.</p>
+            <a href="index.html" class="mt-4 inline-block text-sky-600 hover:text-sky-700 hover:underline">&larr; Voltar para Lista de Produtos</a>
+        </header>
+
+        <section id="secaoPedidos">
+            <!-- Pedidos serão inseridos aqui -->
+            <div id="listaDePedidos" class="space-y-6">
+                <!-- Conteúdo dinâmico -->
+            </div>
+
+            <div id="mensagemSemPedidosEnviados" class="hidden mt-10 p-8 text-center rounded-md border-2 border-dashed border-slate-300 text-slate-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <p class="text-xl font-semibold">Nenhum pedido encontrado.</p>
+                <p class="mt-1">Parece que você ainda não confirmou nenhum pedido.</p>
+                <a href="/.html" class="mt-6 inline-block bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-150">
+                    Fazer um Novo Pedido
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="text-center text-sm text-slate-500 py-8 mt-auto">
+        Visualizador de Pedidos &copy; <span id="currentYearPedidos"></span>.
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="visualizar_pedido.js"></script>
+</body>
+</html>

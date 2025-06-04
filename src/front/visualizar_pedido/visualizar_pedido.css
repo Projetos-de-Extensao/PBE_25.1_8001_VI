@@ -1,0 +1,26 @@
+/* Estilo para a fonte Inter */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo para o card de cada pedido */
+.order-card {
+    border: 1px solid #e2e8f0; /* Cor do Tailwind: slate-200 */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.order-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra do Tailwind: shadow-lg */
+}
+
+/* Estilo para cada item de produto dentro de um pedido */
+.product-item-in-order {
+    border-bottom: 1px solid #f1f5f9; /* Cor do Tailwind: slate-100 */
+}
+
+.product-item-in-order:last-child {
+    border-bottom: none;
+}
+
+/* Adicione quaisquer outros estilos personalizados aqui, se necessário.
+   A maior parte da estilização está sendo feita com Tailwind CSS diretamente no HTML. */

@@ -27,23 +27,28 @@ class Motorista(models.Model):
         return self.nome
 
 class Cliente(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=11, unique=True)
     data_nascimento = models.DateField()
     premium = models.BooleanField(default=False)
+    email = models.CharField(max_length=30)
 
     def __str__(self):
         return self.nome
 
 class Pedido(models.Model):
-    descricao = models.TextField(blank=True, null=True)  # Descrição do pedido
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='pedidos')  # Quem fez o pedido
-    produtos = models.ManyToManyField(Produto, related_name='pedido')  # Produtos incluídos no pedido
+    STATUS_PEDIDO_CHOICES = [
+        ('em_analise', 'Em Análise'),
+        ('confirmado', 'Pedido Confirmado'), #status possiveis
+    ]
+
     preco = models.DecimalField(max_digits=6, decimal_places=2) #somatório do preço dos pedidos
     data_de_criacao = models.DateTimeField(auto_now_add=True)  # Data de criação
     ultima_atualizacao = models.DateTimeField(auto_now=True)  # Data de última atualização
-    status = models.CharField(max_length=20, default='Em processo') # O status do pedido
-    motorista = models.ForeignKey(Motorista, related_name='pedidos_entregues', on_delete=models.CASCADE, null=True)
+    status = models.CharField(max_length=20,choices= STATUS_PEDIDO_CHOICES ,default='em_analise') # O status do pedido
+    motorista = models.ForeignKey(Motorista, related_name='pedidos_entregues', on_delete=models.CASCADE, null=True, blank=True)# Motoerista do pedido
+    descricao = models.TextField() # Descrição do pedido
 
     class Meta:
         ordering = ['data_de_criacao']
@@ -51,7 +56,7 @@ class Pedido(models.Model):
         verbose_name_plural = 'Pedidos'
 
     def __str__(self):
-        return self.cliente
+        return f"Pedido {self.id} - {self.get_status_display()}"
 
 
 
