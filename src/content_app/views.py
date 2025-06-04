@@ -2,7 +2,7 @@
 from rest_framework import viewsets
 from .models import Cliente,Produto,Motorista,Pedido
 from .serializers import ClienteSerializer, ProdutoSerializer, MotoristaSerializer, PedidoSerializer
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated
 
 #criando as views do cliente e produto
 
@@ -19,6 +19,13 @@ class MotoristaViewSet(viewsets.ModelViewSet):
     serializer_class = MotoristaSerializer
 
 class PedidoViewSet(viewsets.ModelViewSet):
-    queryset = Pedido.objects.all()
     serializer_class = PedidoSerializer
-
+    queryset = Pedido.objects.all()
+    
+    def get_queryset(self):
+        user_logado = self.request.user
+        # Se o usuário for admin, pode ver todos ou filtrar
+        if user_logado.is_staff:
+            return Pedido.objects.all().order_by('data_de_criacao')
+        else:
+            return Pedido.objects.filter(cliente=user_logado).order_by('data_de_criacao')
