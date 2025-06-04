@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnAdicionarProduto) {
         btnAdicionarProduto.addEventListener('click', function() {
-            window.location.href = '/adicionar_produto/adicionar_produto.html';
+            window.location.href = '/pedidos/ver_pedidos.html';
         });
     }
 
     if (btnVerPedidos) {
         btnVerPedidos.addEventListener('click', function() {
-            window.location.href = '/pedidos/ver_pedidos.html';
+            window.location.href = '/visualizar_pedido/visualizar_pedido.html';
         });
     }
 
