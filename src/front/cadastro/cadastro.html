@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="cadastro.css">
+    <!-- Google Fonts para uma aparência mais moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+<header class="form-header">
+<h2>Criar Nova Conta</h2>
+<p>Preencha os dados abaixo para se registrar.</p>
+</header>
+
+<form id="registration-form" novalidate>
+    <div class="input-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="input-group">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" placeholder="Digite apenas os números" maxlength="11" required>
+        <!-- Mensagem de feedback para o CPF -->
+        <div id="cpf-feedback" class="feedback"></div>
+    </div>
+
+    <div class="input-group">
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input type="date" id="data-nascimento" name="data_nascimento" required>
+    </div>
+
+    <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <button type="submit" id="submit-button" disabled>Criar Conta</button>
+</form>
+</div>
+
+    <!-- Link para o arquivo JavaScript no final do body -->
+    <script src="cadastro.js"></script>
+</body>
+</html>
