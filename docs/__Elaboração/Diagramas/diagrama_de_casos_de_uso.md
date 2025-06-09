@@ -10,15 +10,15 @@ title: Diagrama de Casos de uso
 ```puml
 <style>
 document {
-  BackGroundColor #white
+BackGroundColor #white
 }
 root {
-  FontColor #black
-  LineColor #black
+FontColor #black
+LineColor #black
 }
 legend{
-    FontColor white
-    BackGroundColor white
+FontColor white
+BackGroundColor white
 }
 </style>
 @startuml
@@ -28,34 +28,23 @@ actor :Sistema: as S
 usecase "cadastro de usuario" #white
 usecase "login de cadastro" #white
 usecase "e-mail e senha" #white
-usecase "conta google" #white
 usecase "realizar pedidos" #white
 usecase "sem endereco" #white
-usecase "pedir ate 2 enderecos" #white
 usecase "editar dados pessoais" #white
 usecase "cadastrar mais endereco" #white
 usecase "pesquisar produtos" #white
 usecase "adiciona produto" #white
 usecase "remover produto" #white
-usecase "rapido" #white
-usecase "grande" #white
-usecase "rastrear pedidos" #white
-usecase "calcular tempo de entrega" #white
 usecase "exibir status do pedido" #white
-usecase "exibe restaurantes favoritos" #white
 usecase "processar pagamento" #white
 usecase "exibir frete" #white
 usecase "exibir tipos de entrega" #white
 usecase "cancela pedido" #white
-usecase "adiciona restaurante favorito" #white
-usecase "remove restaurante favorito" #white
 usecase "realizar pagamento" #white
 usecase "PIX" #white
 usecase "Cartão de débito" #white
 usecase "Cartão de crédito" #white
-usecase "seleciona tipo de entrega" #white
 usecase "notificar atrasos" #white
-
 
 A ---> (cadastro de usuario)
 
@@ -79,30 +68,17 @@ A --up-> (remover produto)
 
 A --up-> (cancela pedido)
 
-A -up--> (adiciona restaurante favorito)
-
-A ---> (remove restaurante favorito)
-
 A ---> (realizar pagamento)
 (realizar pagamento) --> (Cartão de crédito): <<extend>>
 (realizar pagamento) --> (PIX): <<extend>>
 (realizar pagamento) --> (Cartão de débito): <<extend>>
 
-
-A ---> (seleciona tipo de entrega)
-(seleciona tipo de entrega) --> (rapido): <<extend>>
-(seleciona tipo de entrega) --> (grande): <<extend>>
-
 S -up--> (rastrear pedidos)
-S -up--> (calcular tempo de entrega)
 S -up--> (exibir status do pedido)
-S -up--> (exibe restaurantes favoritos)
 S ---> (processar pagamento)
 S ---> (exibir frete)
 S ---> (notificar atrasos)
 S ---> (exibir tipos de entrega)
-
-
 @enduml
 ```
 
@@ -119,3 +95,4 @@ S ---> (exibir tipos de entrega)
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
 | 08/04/25 | 1.0 | Criação do documento | João Pedro, Pedro Silvestre |
+| 09/06/25 | 1.0 | Atualização do documento | João Pedro Borges Souza Santana |

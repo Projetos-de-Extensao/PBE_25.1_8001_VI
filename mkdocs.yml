@@ -7,7 +7,6 @@ theme:
     accent: deep purple
     scheme: slate
 
-
 plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/

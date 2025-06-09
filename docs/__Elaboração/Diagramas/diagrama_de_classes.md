@@ -26,26 +26,53 @@ Para a criação da primeira versão do diagrama de classes, a equipe utilizou o
 
 ```puml
 @startuml
+title Diagrama de classes V2
 
-title Diagrama de classes
+class Pedido {
+cliente : char
+motorista : char
+preco : decimalFiel
+dataDeCriacao : dateTime
+ultimaAtualizacao : dateTime
+status : char
+descricao : textField
+}
+class Cliente {
+usuario : char
+nome : char
+cpf : char
+dataNascimento : dateField
+premium : boolean
+email : char
+}
+class Motorista {
+nome : char
+cpf : char
+dataNascimento : dateField
+veiculo : char
+telefone : char
+email : char
+cnh : char
+numeroRegistro : char
+senha : char
+}
+class Produto {
+nome : char
+preco : float
+descricao : textField
+}
+class Pagamento {
+valor : decimalField
+dataPagamento : dateTimeField
+metodoPagemnto : char
+status : char
+pedido : oneField
+}
 
-class Pedido
-class Cliente
-class Motorista
-class Item
-class Pagamento
-class Avaliação
-class Restaurante
-
-Cliente <|-down- Avaliação
-Cliente <|-left- Pedido
-Pedido <|-down- Item
-
-Pedido <|-up- Pagamento
+Cliente <|-down- Pedido
+Pedido <|-right- Pagamento
+Pedido <|-left- Produto
 Motorista <|-down- Pedido
-Restaurante <|- Pedido
-
-
 @enduml
 ```
 ### Versão 1.1
@@ -88,6 +115,7 @@ Através do diagrama de classes, foi possível representar a estrutura do sistem
 | 28/09/20 | 1.1 | Ajustes no documento | João Pedro e Renan Cristyan |
 | 28/09/20 | 1.2 | Adicionado diagrama de classes 1.1 | João Pedro e Renan Cristyan |
 | 26/10/20 | 2.0 | Adicionado diagrama de classes 2.0 | João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan |
+| 09/06/25 | 2.1 | Atualizando diagrama | João Pedro Borges Souza Santana |
 =======
 ---
 id: diagrama_de_classes
