@@ -10,8 +10,10 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco', 'descricao')
 
 class PedidoAdmin(admin.ModelAdmin):
-    list_display = ('cliente','preco', 'status', 'motorista')
-
+    list_filter = ('status','cliente__username')
+    list_display = ('cliente','preco', 'status', 'motorista', 'data_de_criacao')
+    search_fields = ('cliente__username',)
+    
 class MotoristaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'cpf_motorista', 'veiculo', 'telefone', 'cnh')
 
