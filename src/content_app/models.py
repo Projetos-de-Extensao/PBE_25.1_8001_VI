@@ -41,7 +41,9 @@ class Pedido(models.Model):
     STATUS_PEDIDO_CHOICES = [
         ('em_analise', 'Em Análise'),
         ('confirmado', 'Pedido Confirmado'),
-        ('pago', 'Pago')#status possiveis
+        ('pago', 'Pago'),
+        ('pedido_enviado', 'Pedido Enviado'),
+        ('entregue', 'Entregue')#status possiveis
     ]
     cliente = models.ForeignKey(User, on_delete=models.CASCADE, related_name='pedidos')  # Quem fez o pedido
     preco = models.DecimalField(max_digits=6, decimal_places=2) #somatório do preço dos pedidos
