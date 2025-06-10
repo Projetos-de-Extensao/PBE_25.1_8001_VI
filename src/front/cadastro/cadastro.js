@@ -108,7 +108,7 @@ password: formData.get('password'),
 
  // Se o registro for bem-sucedido
  alert(data.message || 'Conta criada com sucesso! Você será redirecionado para a página de login.');
- window.location.href = 'login.html'; // Altere para a sua página de login
+ window.location.href = '/login/login.html'; // Altere para a sua página de login
 } catch (error) {
 console.error('Erro ao registrar:', error);
 alert(error.message);

@@ -121,6 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ? parseFloat(pedido.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     : 'Preço indisponível';
                 
+                const displayId = pedido.id || 'ID não disponível';
+                
                 let displayData = 'Data não disponível';
                 if (pedido.data_de_criacao) {
                     try {
