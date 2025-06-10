@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pedidoCard.innerHTML = `
                     <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-200 pb-3 mb-3">
                         <div>
-                            <h3 class="text-xl font-semibold text-sky-700">Pedido #${pedido.id}</h3>
+                            <h3 class="text-xl font-semibold text-sky-700">ID do pedido: ${displayId}</h3>
                             <p class="text-sm text-slate-500">Data: ${displayData}</p>
                         </div>
                         <p class="text-lg font-semibold text-slate-800 mt-2 sm:mt-0">Total: ${precoFormatado}</p>
