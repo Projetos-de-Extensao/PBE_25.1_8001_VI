@@ -37,7 +37,7 @@ Insira um manual ou um script para auxiliar ainda mais.
 Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto final.
+https://github.com/user-attachments/assets/cf8fbf62-ccd1-4d11-a6a9-7a2175b99199
 
 ## Outros 
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
