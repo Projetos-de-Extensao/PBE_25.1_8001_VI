@@ -36,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "Dados no localStorage para produtos não são um array. Retornando lista vazia.",
           parsed
         );
-        // Opcional: Remover os dados inválidos para evitar problemas futuros
-        // localStorage.removeItem(LOCAL_STORAGE_KEY);
         return [];
       }
     } catch (error) {
@@ -46,8 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Erro ao parsear produtos do localStorage. Retornando lista vazia.",
         error
       );
-      // Opcional: Remover os dados inválidos para evitar problemas futuros
-      // localStorage.removeItem(LOCAL_STORAGE_KEY);
       return [];
     }
   }
@@ -166,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Função para atualizar os listeners dos botões de remoção
-  // Esta abordagem de clonar e substituir funciona para remover listeners antigos.
   function atualizarListenersRemocao() {
     const botoesRemover = document.querySelectorAll(".remover-produto-btn");
     botoesRemover.forEach((botao) => {
@@ -189,16 +184,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let produtos = carregarProdutos();
       produtos = produtos.filter((p) => p.id !== produtoIdParaRemover);
       salvarProdutos(produtos);
-      // A animação de remoção pode ser complexa de sincronizar perfeitamente
-      // com a re-renderização. Uma abordagem mais simples é apenas re-renderizar.
       renderizarProdutos();
       esconderModalConfirmacao();
     }
   });
-
-  // Renderiza os produtos ao carregar a página
-  renderizarProdutos();
-
 
   // Define o ano atual no rodapé
   document.getElementById("currentYear").textContent = new Date().getFullYear();
@@ -207,67 +196,86 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarProdutos();
   nomeProdutoInput.focus(); // Foca no primeiro campo ao carregar
 
+  // --- INÍCIO DAS MODIFICAÇÕES ---
+
+  /**
+   * Envia os dados do pedido para a API.
+   * @param {object} contentData - Os dados do pedido (preço, descrição).
+   * @returns {Promise<boolean>} - Retorna true se bem-sucedido, false caso contrário.
+   */
   async function FazPost(contentData) {
-
     try {
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        'Authorization': `Token ${localStorage.getItem('Token')}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(contentData),
-    },console.log(contentData));
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          'Authorization': `Token ${localStorage.getItem('Token')}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contentData),
+      });
 
-    if (response.ok) {
-      alert("Conteúdo adicionado com sucesso!");
-      // Limpa o formulário
-    } else {
-      const errorData = await response.json();
-      alert(`Erro ao adicionar conteúdo 1: ${errorData.message || response.statusText}`);
+      if (response.ok) {
+        alert("Pedido confirmado com sucesso!");
+        return true; // Indica que o POST foi bem-sucedido
+      } else {
+        const errorData = await response.json();
+        alert(`Erro ao confirmar pedido: ${errorData.message || response.statusText}`);
+        return false; // Indica que o POST falhou
+      }
+    } catch (error) {
+      console.error("Erro na requisição para confirmar o pedido:", error);
+      alert("Ocorreu um erro de rede. Tente novamente.");
+      return false; // Indica que o POST falhou
     }
-  } catch (error) {
-    console.error("Erro ao adicionar conteúdo 2:", error);
   }
 
+  let preco = 0;
+  /**
+   * Prepara a descrição e calcula o preço total do pedido.
+   * @returns {string} - A descrição formatada do pedido.
+   */
+  function ConfirmaPedido() {
+    preco = 0; // Reseta o preço total a cada chamada
+    const jsonProdutos = carregarProdutos();
+    let postDescricao = "";
+    jsonProdutos.forEach(element => {
+      postDescricao += `Nome: ${element.nome} - R$ ${element.preco} - Descrição: ${element.descricao}\n`;
+      preco += element.preco;
+    });
+    return postDescricao;
   }
 
-  let preco = 0
-  function ConfirmaPedido(event) {
-  preco = 0
+  // Listener para o botão de confirmar o pedido
+  document.getElementById("botaoConfirmarPedido").addEventListener("click", async (event) => {
+    event.preventDefault();
 
-    const Json = carregarProdutos();
-    let PostDescricao = ""
-    Json.forEach(element => {PostDescricao += `Nome: ${element.nome} - R$ ${element.preco} - Descrição ${element.descricao}
-      `;
-      preco += element.preco})
-    return PostDescricao
+    const produtosAtuais = carregarProdutos();
+    if (produtosAtuais.length === 0) {
+        alert("Adicione produtos ao pedido antes de confirmar.");
+        return;
+    }
 
+    const descricao = ConfirmaPedido();
+    // const cliente = localStorage.getItem('clienteId');
 
-}
+    const contentData = {
+      preco,
+      descricao,
+      // cliente
+    };
 
+    const sucesso = await FazPost(contentData); // Espera a função FazPost terminar
 
-document.getElementById("botaoConfirmarPedido").addEventListener("click", event => {
-event.preventDefault();
-const descricao = ConfirmaPedido();
+    if (sucesso) {
+      // Se o post foi bem-sucedido, limpa a lista de produtos
+      localStorage.removeItem(LOCAL_STORAGE_KEY);
+      // Re-renderiza a UI, que agora mostrará a lista vazia
+      renderizarProdutos();
+      console.log("Pedido confirmado e lista de produtos foi limpa.");
+    } else {
+      console.log("O pedido não foi confirmado. A lista de produtos foi mantida.");
+    }
+  });
 
-
-  //const cliente = localStorage.getItem('clienteId');
-
-
-  const contentData = {
-    preco,
-    descricao
-    //cliente
-  };
-
-
-  FazPost(contentData);
-  console.log(contentData)
-})
-
+  // --- FIM DAS MODIFICAÇÕES ---
 });
-
-
-
-
