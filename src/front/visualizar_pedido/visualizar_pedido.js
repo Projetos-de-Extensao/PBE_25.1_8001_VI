@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 let statusClass = 'text-orange-600'; // em_analise (default)
                 if (statusProduto === 'confirmado') statusClass = 'text-green-600';
                 if (statusProduto === 'pago') statusClass = 'text-blue-600';
+                if (statusProduto === 'pedido_enviado') statusClass = 'text-orange-600';
+                if (statusProduto === 'entregue') statusClass = 'text-green-600';
                 
                 // --- ATUALIZAÇÃO: Condicional para o botão "Pagar" ---
                 let payButtonHTML = '';

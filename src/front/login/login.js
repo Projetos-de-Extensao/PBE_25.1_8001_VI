@@ -125,7 +125,7 @@ loginForm.addEventListener('submit', async function(event) { // Tornamos a funç
     console.log('Token de acesso:', tokenData);
     localStorage.setItem('Token', tokenData.token);
     //chamar a funcao que faz o get e salvar o id
-    window.location.href = '/home/home.html'
+    window.location.href = '../home/home.html'
 
     // Aqui você pode, por exemplo, salvar o token no localStorage e redirecionar o usuário
     // localStorage.setItem('accessToken', tokenData.access);

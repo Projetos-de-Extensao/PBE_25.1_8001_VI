@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnAdicionarProduto) {
         btnAdicionarProduto.addEventListener('click', function() {
-            window.location.href = '/pedidos/enviar_pedidos.html';
+            window.location.href = '../pedidos/enviar_pedidos.html';
         });
     }
 
     if (btnVerPedidos) {
         btnVerPedidos.addEventListener('click', function() {
-            window.location.href = '/visualizar_pedido/visualizar_pedido.html';
+            window.location.href = '../visualizar_pedido/visualizar_pedido.html';
         });
     }
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             alert('Você foi desconectado!'); // Mensagem para o usuário
 
-            window.location.href = '/login/login.html';
+            window.location.href = '../login/login.html';
         });
     }
 });
