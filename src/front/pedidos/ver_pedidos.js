@@ -1,4 +1,4 @@
-const apiUrl = "http://127.0.0.1:8000/api/pedido/"; // Esta variável não está sendo usada no script atual
+const apiUrl = "http://127.0.0.1:8000/api/pedidos/"; // Esta variável não está sendo usada no script atual
 
 document.addEventListener("DOMContentLoaded", () => {
   const formAdicionarProduto = document.getElementById("formAdicionarProduto");

@@ -1,6 +1,6 @@
 # Create your views here.
 from rest_framework import viewsets
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes,action
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Cliente,Produto,Motorista,Pedido
@@ -36,6 +36,27 @@ class PedidoViewSet(viewsets.ModelViewSet):
     
     def perform_create(self, serializer):
         serializer.save(cliente=self.request.user)
+        
+        
+    @action(detail=True,methods=['post'], url_path='pagar')
+    def pagar(self, request, pk=None):
+        #realiza o pagamento do pedido
+        pedido = self.get_object()
+        
+        if pedido.status != 'confirmado':
+                return Response(
+                    {'error': 'Este pedido não pode ser pago, pois não está com o status "confirmado".'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+        
+        #Atualiza o status e sala
+        pedido.status = 'pago'
+        pedido.save()
+        
+        #retorna os dados atualizados do pedido
+        serializer = self.get_serializer(pedido)
+        return Response(serializer.data)
+    
 
         
 @api_view(['GET'])
@@ -97,3 +118,4 @@ def cadastrar_cliente_view(request):
     
     # Se a validação falhar, o DRF retorna automaticamente os erros
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+

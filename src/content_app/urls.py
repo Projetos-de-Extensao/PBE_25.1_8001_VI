@@ -6,7 +6,7 @@ from django.urls import path
 router = DefaultRouter()
 router.register(r'produto', ProdutoViewSet)
 router.register(r'cliente', ClienteViewSet)
-router.register(r'pedido', PedidoViewSet)
+router.register(r'pedidos', PedidoViewSet)
 router.register(r'motorista', MotoristaViewSet)
 
 urlpatterns = router.urls + [
