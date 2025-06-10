@@ -3,8 +3,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import api_view, permission_classes,action
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Cliente,Produto,Motorista,Pedido
-from .serializers import ClienteSerializer, ProdutoSerializer, MotoristaSerializer, PedidoSerializer, CadastroClienteSerializer
+from .models import Cliente,Motorista,Pedido
+from .serializers import ClienteSerializer, MotoristaSerializer, PedidoSerializer, CadastroClienteSerializer
 from rest_framework.permissions import IsAuthenticated,AllowAny
 
 #criando as views do cliente e produto
@@ -12,10 +12,6 @@ from rest_framework.permissions import IsAuthenticated,AllowAny
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
-
-class ProdutoViewSet(viewsets.ModelViewSet):
-    queryset = Produto.objects.all()
-    serializer_class = ProdutoSerializer
 
 class MotoristaViewSet(viewsets.ModelViewSet):
     queryset = Motorista.objects.all()
@@ -25,7 +21,7 @@ class PedidoViewSet(viewsets.ModelViewSet):
     serializer_class = PedidoSerializer
     queryset = Pedido.objects.all()
     permission_classes = [IsAuthenticated]
-    
+
     def get_queryset(self):
         user_logado = self.request.user
         # Se o usuário for admin, pode ver todos ou filtrar
@@ -33,32 +29,32 @@ class PedidoViewSet(viewsets.ModelViewSet):
             return Pedido.objects.all().order_by('data_de_criacao')
         else:
             return Pedido.objects.filter(cliente=user_logado).order_by('data_de_criacao')
-    
+
     def perform_create(self, serializer):
         serializer.save(cliente=self.request.user)
-        
-        
+
+
     @action(detail=True,methods=['post'], url_path='pagar')
     def pagar(self, request, pk=None):
         #realiza o pagamento do pedido
         pedido = self.get_object()
-        
+
         if pedido.status != 'confirmado':
                 return Response(
                     {'error': 'Este pedido não pode ser pago, pois não está com o status "confirmado".'},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-        
+
         #Atualiza o status e sala
         pedido.status = 'pago'
         pedido.save()
-        
+
         #retorna os dados atualizados do pedido
         serializer = self.get_serializer(pedido)
         return Response(serializer.data)
-    
 
-        
+
+
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def verificar_cpf(request):
@@ -103,7 +99,7 @@ def cadastrar_cliente_view(request):
     if serializer.is_valid():
         # O método save() irá executar o nosso método create customizado
         cliente = serializer.save()
-        
+
         # Você pode retornar alguns dados do cliente criado se quiser
         # Mas por segurança, não retorne a senha.
         return Response(
@@ -115,7 +111,7 @@ def cadastrar_cliente_view(request):
             },
             status=status.HTTP_201_CREATED
         )
-    
+
     # Se a validação falhar, o DRF retorna automaticamente os erros
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

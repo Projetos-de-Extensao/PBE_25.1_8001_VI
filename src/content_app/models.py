@@ -4,14 +4,6 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Produto(models.Model):
-    nome = models.CharField(max_length=100)
-    preco = models.DecimalField(max_digits=6, decimal_places=2)
-    descricao = models.TextField()
-
-    def __str__(self):
-        return self.nome
-
 class Motorista(models.Model):
     nome = models.CharField(max_length=100)
     cpf_motorista = models.CharField(max_length=11, unique= True)
@@ -62,14 +54,4 @@ class Pedido(models.Model):
         return f"Pedido {self.id} - {self.get_status_display()}"
 
 
-
-class Pagamento(models.Model):
-    valor = models.DecimalField(max_digits=6, decimal_places=2)
-    data_pagamento = models.DateTimeField(default=timezone.now)
-    metodo_pagamento = models.CharField(max_length=50)
-    status = models.CharField(max_length=20, default='Pendente')
-    pedido = models.OneToOneField(Pedido, on_delete=models.CASCADE, related_name='pagamento',null=True)
-
-    def  __str__(self):
-            return f'Pagamento #{self.id} - R$ {self.valor}'
 
